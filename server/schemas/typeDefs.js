@@ -22,10 +22,25 @@ const typeDefs = gql`
 
     type Budget {
         _id: ID
-        expenseName: String
-        expenseAmount: Int
-        income: Int 
+        expenseName: String!
+        expenseAmount: Int!
+        income: Int!
         total: Int!
+    }
+
+    type Query {
+        currentUser: User
+        todos: [ToDos]
+        todos(_id: ID!): ToDos
+        budget: [Budget]
+        singleExpense: Budget
+    }
+
+    type Mutation {
+        addUser(username: String!, email: String!, password: String!): User
+        addToDos(todoName: String!, recurrence: String!, dailyReset: Boolean!): ToDos
+        addBudgetTotal(total: Int!): Budget
+        addBudgetExpense(expenseName: String!, expenseAmount: Int!): Budget
     }
 `;
 
