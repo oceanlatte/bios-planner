@@ -3,7 +3,7 @@ import {DayPilot, DayPilotMonth} from "@daypilot/daypilot-lite-react";
 import "./MonthlyStyles.css";
 import "./icons/style.css";
 
-class MonthlyCalendar extends Component {
+class Monthly extends Component {
 
   constructor(props) {
     super(props);
@@ -148,4 +148,4 @@ class MonthlyCalendar extends Component {
   }
 }
 
-export default MonthlyCalendar;
+export default Monthly;

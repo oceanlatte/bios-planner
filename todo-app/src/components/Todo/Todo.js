@@ -2,7 +2,7 @@ import React from "react";
 
 const todos = ["Finish homework", "Wash dishes", "Clean room", "Make waffles"];
 
-const TodoList = () => (
+const Todo = () => (
   <ul>
     {todos.map(task => (
       <li key={task}>{task}</li>
@@ -10,4 +10,4 @@ const TodoList = () => (
   </ul>
 );
 
-export default TodoList;
+export default Todo;
