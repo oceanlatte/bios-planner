@@ -41,6 +41,17 @@ const typeDefs = gql`
         addToDos(todoName: String!, recurrence: String!, dailyReset: Boolean!): ToDos
         addBudgetTotal(total: Int!): Budget
         addBudgetExpense(expenseName: String!, expenseAmount: Int!): Budget
+        addBudgetIncome(income: Int!): Budget
+        updateUser(email: String, password: String): User
+        updateToDo(todoName: String, recurrence: String!, dailyReset: Boolean): ToDos
+        updateBudgetExpense(expenseName: String, expenseAmount: String): Budget
+        updateBudgetIncome(income: Int): Budget
+        updateBudgetTotal(total: Int): Budget
+        deleteUser(_id: ID!): User
+        deleteSingleTodo(_id: ID!): ToDos
+        deleteSingleExpense(_id: ID!): Budget
+        deleteSingleIncome(_id: ID!): Budget
+        deleteBudget(_id: ID!): Budget
     }
 `;
 
