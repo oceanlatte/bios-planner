@@ -1,3 +1,23 @@
+:root {
+  --main-background: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
+  --orange-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
+  --purple-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
+  --font-color: #EEEEEEE;
+  --lightest-orange: #fbdcd0;
+  --light-orange1: #f39d7c;
+  --app-name: #f39d7c;
+  --dark-orange: #f39d7c;
+  --todo-background: #846a91;
+  --nav-bar: #75638d;
+  --budget-background: #392646;
+  --magenta: #660066;
+
+}
+
+h2 {
+  text-align: left;
+}
+
 .App {
   text-align: center;
   background-image: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
@@ -28,6 +48,12 @@
   color: #61dafb;
 }
 
+.card {
+  background-color: aqua;
+  width: 25% ;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +62,4 @@
     transform: rotate(360deg);
   }
 }
+

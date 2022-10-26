@@ -23,7 +23,12 @@ import { Link } from "react-router-dom";
               <Link class="nav-link active" to="/Monthly">
                 Monthly
               </Link>
-            </li>           
+            </li>  
+            <li class="nav-item">
+              <Link class="nav-link active" to="/Budget">
+                Budget
+              </Link>
+            </li>         
           </ul>
 
         </div>

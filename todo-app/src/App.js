@@ -11,6 +11,7 @@ import "./App.css";
 import Todo from "./components/Todo/Todo.js";
 import Monthly from "./components/Monthly/Monthly.js";
 import Navigation from "./components/Navigation/Navigation.js";
+import Budget from "./components/Budget/Budget.js";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Switch>
         <Route path ="/Todo" component= {Todo}/>
         <Route path ="/Monthly" component= {Monthly}/>
+        <Route path ="/Budget" component={Budget}/>
       </Switch>
       </main>
     </div>
