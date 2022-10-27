@@ -22,19 +22,25 @@ li {
   color: #eeeeee;
 }
 
+p{
+  color: var(--magenta);
+}
+
 .App {
   background-color: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
 }
 
+.navbar {
+  display: inline-block; 
+}
 .nav-brand {
   color: var(--app-name);
   text-align: left;
 }
 
 .tab {   
-  line-height: 0.8;  
-  display: inline-block;  
-  margin-left: -35px;  
+  display: inline-block; 
+  justify-content: stretch; 
   border: none;  
   border-radius: 6px 6px 0 0;  
   position: relative;  
@@ -42,7 +48,6 @@ li {
   white-space: nowrap;  
   cursor: pointer;  
   background: var(--light-orange1);
-
   } 
 
 
