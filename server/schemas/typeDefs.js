@@ -5,7 +5,7 @@ const { gql } = require("apollo-server-express");
 const typeDefs = gql`
     type User {
         _id: ID
-        username: String!
+        username: String
         email: String
         todos: [Todos]
         budget: [Budget]
@@ -39,7 +39,7 @@ const typeDefs = gql`
     }
 
     type Query {
-        currentUser: User
+        currentUser(username: String): User
         todos: [Todos]
         singleTodo(_id: ID!): Todos
         budget: [Budget]
