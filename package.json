@@ -2,6 +2,7 @@
   "dependencies": {
     "bootstrap": "^5.2.2",
     "react-bootstrap": "^2.5.0",
-    "react-weekly-schedule": "^0.0.0-development"
+    "react-weekly-schedule": "^0.0.0-development",
+    "semantic-ui-react": "^2.1.3"
   }
 }

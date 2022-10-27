@@ -14,8 +14,6 @@ function Footer() {
                     <Col >
                     <p>BIOS 2022</p>
                     </Col>
-                    <Col >
-                    </Col>
                 </Row>
             </Container>
         </footer>

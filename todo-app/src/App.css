@@ -2,7 +2,7 @@
   --main-background: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
   --orange-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
   --purple-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
-  --font-color: #EEEEEEE;
+  --font-color: #EEEEEE;
   --lightest-orange: #fbdcd0;
   --light-orange1: #f39d7c;
   --app-name: #f39d7c;
@@ -15,18 +15,45 @@
 }
 
 h2 {
-  text-align: left;
+  color: #eeeeee;
+}
+
+li {
+  color: #eeeeee;
 }
 
 .App {
-  text-align: center;
-  background-image: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
+  background-color: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-brand {
+  color: var(--app-name);
+  text-align: left;
 }
+
+.tab {   
+  line-height: 0.8;  
+  display: inline-block;  
+  margin-left: -35px;  
+  border: none;  
+  border-radius: 6px 6px 0 0;  
+  position: relative;  
+  margin-right: 4rem;  
+  white-space: nowrap;  
+  cursor: pointer;  
+  background: var(--light-orange1);
+
+  } 
+
+
+.card {
+  background-color: var(--budget-background);
+  width: 25% ;
+  color: var(--light-orange1);
+  border-radius: 25px;
+  
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -34,24 +61,6 @@ h2 {
   }
 }
 
-.App-header {
- 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.card {
-  background-color: aqua;
-  width: 25% ;
-}
 
 
 @keyframes App-logo-spin {
