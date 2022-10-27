@@ -2,28 +2,33 @@ const { Schema, model } = require('mongoose');
 
 const budgetSchema = new Schema(
     {
-        expenseName: String,
-        required: true,
-        unique: true
-    },
-    {
-        expenseAmount: Number,
-        required: true
-    },
-    {
-        income: Number,
-        required: false
-    },
-    {
-        total: Number,
-        required: true
+        expenseName: {
+            type: String,
+            required: true,
+            unique: true
+        },
+
+        expenseAmount: {
+            type: Number,
+            required: true
+        },
+
+        income: {
+            type: Number,
+            required: false
+        },
+
+        total: {
+            type: Number,
+            required: true
+        },
     },
     {
         toJSON: {
             virtuals: true
         }
     }
-)
+);
 
 const Budget = model('Budget', budgetSchema);
 
