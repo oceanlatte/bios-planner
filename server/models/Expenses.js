@@ -13,6 +13,10 @@ const expensesSchema = new Schema(
         }
     },
     {
-        t
+        toJson: {
+            getters: true
+        }
     }
-)
+);
+
+module.exports = expensesSchema;
