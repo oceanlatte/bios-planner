@@ -7,11 +7,11 @@ const typeDefs = gql`
         _id: ID
         username: String!
         email: String
-        todos: [ToDos]
+        todos: [Todos]
         budget: [Budget]
     }
 
-    type ToDos {
+    type Todos {
         _id: ID
         todoName: String!
         createdAt: String
@@ -22,33 +22,44 @@ const typeDefs = gql`
 
     type Budget {
         _id: ID
+        total: Int!
+        expense: [Expense]
+        income: [Income]
+    }
+
+    type Expense {
+        _id: ID
         expenseName: String!
         expenseAmount: Int!
-        income: Int!
-        total: Int!
+    }
+
+    type Income {
+        _id: ID
+        amount: Int!
     }
 
     type Query {
         currentUser: User
-        todos: [ToDos]
-        todos(_id: ID!): ToDos
+        todos: [Todos]
+        singleTodo(_id: ID!): Todos
         budget: [Budget]
-        singleExpense: Budget
+        expenses: [Expense]
+        income: [Income]
     }
 
     type Mutation {
         addUser(username: String!, email: String!, password: String!): User
-        addToDos(todoName: String!, recurrence: String!, dailyReset: Boolean!): ToDos
+        addTodos(todoName: String!, recurrence: String!, dailyReset: Boolean!): Todos
         addBudgetTotal(total: Int!): Budget
-        addBudgetExpense(expenseName: String!, expenseAmount: Int!): Budget
-        addBudgetIncome(income: Int!): Budget
+        addExpense(expenseName: String!, expenseAmount: Int!): Budget
+        addIncome(income: Int!): Budget
         updateUser(email: String, password: String): User
-        updateToDo(todoName: String, recurrence: String!, dailyReset: Boolean): ToDos
-        updateBudgetExpense(expenseName: String, expenseAmount: String): Budget
-        updateBudgetIncome(income: Int): Budget
+        updateTodo(todoName: String, recurrence: String!, dailyReset: Boolean): Todos
+        updateExpense(expenseName: String, expenseAmount: String): Budget
+        updateIncome(income: Int): Budget
         updateBudgetTotal(total: Int): Budget
         deleteUser(_id: ID!): User
-        deleteSingleTodo(_id: ID!): ToDos
+        deleteSingleTodo(_id: ID!): Todos
         deleteSingleExpense(_id: ID!): Budget
         deleteSingleIncome(_id: ID!): Budget
         deleteBudget(_id: ID!): Budget
