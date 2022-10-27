@@ -9,7 +9,7 @@ const userSchema = new Schema(
             type: String,
             required: true,
             unique: true,
-            trime: true
+            trim: true
         },
         email: {
             type: String,
@@ -22,8 +22,18 @@ const userSchema = new Schema(
             required: true,
             minLength: 5
         },
-        todos: [todosSchema],
-        budget: [budgetSchema]
+        todos: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Todos'
+            }
+        ],
+        budget: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Budget'
+            }
+        ]
     },
     {
         toJSON: {
