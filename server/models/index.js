@@ -1,5 +1,5 @@
 const User = require("./User");
-const Todo = require("./Todos");
+const Todos = require("./Todos");
 const Budget = require("./Budget")
 
-module.exports = { User, Todo, Budget };
+module.exports = { User, Todos, Budget };

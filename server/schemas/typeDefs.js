@@ -40,7 +40,7 @@ const typeDefs = gql`
 
     type Query {
         currentUser(username: String): User
-        todos: [Todos]
+        todos(username: String): [Todos]
         singleTodo(_id: ID!): Todos
         budget: [Budget]
         expenses: [Expense]

@@ -4,7 +4,7 @@ const todosSchema = new Schema(
     {
         todoName: {
             type: String,
-            required: "What is the name of the task to add?",
+            required: [true, "Please provide a name for the task."],
             minLength: 1,
             maxLength: 20
         },
@@ -14,11 +14,11 @@ const todosSchema = new Schema(
         },
         username: {
             type: String,
-            required: true
+            // required: true
         },
         recurrence: {
             type: String,
-            required: true
+            // required: true
         },
         dailyReset: {
             type: Boolean,
