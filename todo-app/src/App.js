@@ -24,7 +24,6 @@ function App() {
     <Router>
     <div>
       <row>
-      <Header />
       <Navigation />
       <main>
       <Switch>
@@ -35,7 +34,7 @@ function App() {
       </Switch>
       </main>
     </row>
-    
+
     </div>
     
     </Router>

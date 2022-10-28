@@ -1,0 +1,111 @@
+:root {
+  --main-background: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
+  --orange-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
+  --purple-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
+  --font-color: #EEEEEE;
+  --lightest-orange: #fbdcd0;
+  --light-orange1: #f6baa2;
+  --app-name: #f39d7c;
+  --dark-orange: #f39d7c;
+  --todo-background: #846a91;
+  --nav-bar: #75638d;
+  --budget-background: #392646;
+  --magenta: #660066;
+
+}
+
+.mid {
+	display: inline-block;
+	width: 75%;
+	margin: auto;
+
+}
+
+
+.navbar li{
+font-size: 20px;
+list-style: none;
+display:inline-block;
+border-radius: 6px 6px 0 0;  
+white-space: nowrap;  
+cursor: pointer;  
+border-color: black;
+border-style: solid;
+border-width: thin;
+text-align: left;
+}
+
+.tab1 {
+border-radius: 6px 6px 0 0; 
+ background-color: var(--dark-orange);
+ border-color: black;
+border-style: solid;
+border-width: thin;
+text-align: left;
+}
+
+.tab2 {
+  border-radius: 6px 6px 0 0; 
+   background-color: var(--light-orange1);
+   border-color: black;
+  border-style: solid;
+  border-width: thin;
+  text-align: left;
+  }
+  .tab3 {
+  border-radius: 6px 6px 0 0; 
+   background-color: var(--lightest-orange);
+   border-color: black;
+  border-style: solid;
+  border-width: thin;
+  text-align: left;
+  }
+
+  .tab4 {
+    border-radius: 6px 6px 0 0; 
+     background-color: var(--nav-bar);
+     border-color: black;
+    border-style: solid;
+    border-width: thin;
+    text-align: left;
+    }
+
+
+.navbar li a{
+text-decoration: none;
+font-size: 18px;
+padding:8px 20px;
+color: black;
+}
+
+.navbar li a:hover{
+color:rgb(151, 7, 247);
+border: darkmagenta;
+border-radius: 2px;
+font-size: 25px;
+}
+
+.navbar li a:active{
+border-color: #660066;
+border-width: thick;
+}
+
+
+.left {
+display: inline-block;
+width: 20%;
+font-size: 30px;
+padding: 18px 17px;
+color: var(--app-name)
+
+
+}
+
+.left a{
+text-decoration:none;
+color: var(--app-name)
+}
+
+.left:hover{
+font-weight:bolder;
+}

@@ -1,46 +1,44 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import "./Navigation.css";
 
 import Container from "react-bootstrap/Container";
 
 //initialize the section state
 function Navigation(props) {
   return (
- 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-          <h1 className='nav-brand'>
-              BIOS
-          </h1>
-       
-          <div >
-        <ul class="navbar ml-auto">
-          <li class="tab">
-            <Link class="nav-link active" to="/Login">
+ <header>
+  	<div class="left">
+			<a href="#">BIOS</a>
+		</div>
+  <div class="mid">
+		<ul class="navbar">
+          <li >
+            <Link class="nav-link active tab1" to="/Login">
               Login
             </Link>
           </li>
-          <li class="tab">
-            <Link class="nav-link active" to="/Todo">
+          <li>
+            <Link class="nav-link active tab2" to="/Todo">
               Todo
             </Link>
           </li>
           <li class="tab">
-            <Link class="nav-link active" to="/Monthly">
+            <Link class="nav-link active tab3" to="/Monthly">
               Monthly
             </Link>
           </li>
           <li class="tab">
-            <Link class="nav-link active" to="/Budget">
+            <Link class="nav-link active tab4" to="/Budget">
               Budget
             </Link>
           </li>
-          
+            
           
         </ul>
-      </div>
-      </div>
-      </nav>
+        </div>
+      </header>
   );
 };
 
