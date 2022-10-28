@@ -11,11 +11,6 @@ const expensesSchema = new Schema(
             type: Number,
             required: true,
         }
-    },
-    {
-        toJson: {
-            getters: true
-        }
     }
 );
 

@@ -6,11 +6,6 @@ const incomeSchema = new Schema(
             type: Number,
             required: false
         }
-    },
-    {
-        toJson: {
-            getters: true
-        }
     }
 );
 

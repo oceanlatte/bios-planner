@@ -14,20 +14,15 @@ const todosSchema = new Schema(
         },
         username: {
             type: String,
-            // required: true
+            required: true
         },
         recurrence: {
             type: String,
-            // required: true
+            required: true
         },
         dailyReset: {
             type: Boolean,
             default: true
-        }
-    },
-    {
-        toJSON: {
-            virtuals: true
         }
     }
 )

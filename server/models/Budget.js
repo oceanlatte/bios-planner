@@ -10,11 +10,6 @@ const budgetSchema = new Schema(
         },
         expenses: [expensesSchema],
         income: [incomeSchema]
-    },
-    {
-        toJSON: {
-            virtuals: true
-        }
     }
 );
 
