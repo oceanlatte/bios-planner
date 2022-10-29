@@ -2,6 +2,9 @@ const { User, Todos, Budget } = require('../models')
 
 const resolvers = {
   Query: {
+    users: async () => {
+      return User.find();
+    },
     // add auth check here? 
       // get the signed in user
       currentUser: async (parent, { username }) => {
@@ -80,6 +83,18 @@ const resolvers = {
         { new: true, runValidators: true }
       );
       return updateBudget;
+    },
+    // STILL NEED UPDATE: expenses, income
+
+    // DELETE MUTATIONS
+    deleteUser: async (parent, { _id }) => {
+      return User.findByIdAndDelete(_id);
+    },
+    deleteSingleTodo: async (parent, { _id }) => {
+      return Todos.findByIdAndDelete(_id);
+    },
+    deleteBudget: async (parent, { _id }) => {
+      return Budget.findByIdAndDelete(_id);
     },
     
   }
