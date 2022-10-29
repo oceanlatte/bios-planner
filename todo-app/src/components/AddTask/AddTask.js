@@ -1,133 +1,55 @@
-import React, { useState } from "react";
-import "./AddTask.css";
+import 'react-app-polyfill/ie11';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { Formik, Field, Form, FormikHelpers } from 'formik';
 
-function AddTask() {
-  const [state, setState] = useState({
-    fname: "",
-    lname: "",
-    message: "",
-    carBrand: "",
-    isChecked: false,
-    gender: "",
-    price: 0,
-  });
 
-  const handleChange = (e) => {
-    const value =
-      e.target.type === "checkbox" ? e.target.checked : e.target.value;
-    setState({
-      ...state,
-      [e.target.name]: value,
-    });
-  };
-
-  return (
-    <form class="form">
-    <div>
-      <h1>React Form Handling</h1>
-      <form>
-        <label >
-          First Name:{" "}
-         
-          <input
-            type="text"
-            name="fname"
-            value={state.fname}
-            onChange={handleChange}
-          />
-        </label>{" "}
-        <label>
-          Last Name:{" "}
-          <input
-            type="text"
-            name="lname"
-            value={state.lname}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Your Message:{" "}
-          <textarea
-            name="message"
-            value={state.message}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <br />
-        <label>
-          Pick your favorite car brand:{" "}
-          <select
-            name="carBrand"
-            value={state.carBrand}
-            onChange={handleChange}
-          >
-            <option value="mercedes">Mercedes</option>
-            <option value="bmw">BMW</option>
-            <option value="maserati">Maserati</option>
-            <option value="infinity">Infinity</option>
-            <option value="audi">Audi</option>
-          </select>
-        </label>
-        <br />
-        <br />
-        <label>
-          <input
-            type="checkbox"
-            name="isChecked"
-            checked={state.isChecked}
-            onChange={handleChange}
-          />{" "}
-          Is Checked?
-        </label>
-        <br />
-        <br />
-        <label>
-          <input
-            type="radio"
-            name="gender"
-            value="male"
-            checked={state.gender === "male"}
-            onChange={handleChange}
-          />{" "}
-          Male
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="gender"
-            value="female"
-            checked={state.gender === "female"}
-            onChange={handleChange}
-          />{" "}
-          Female
-        </label>
-        <br />
-        <br />
-        <label>
-          Price (between 0 and 50):
-          <input
-            type="range"
-            name="price"
-            min="0"
-            max="50"
-            value={state.price}
-            onChange={handleChange}
-          />
-        </label>
-      </form>
-      <h5>
-        Name: {state.fname} {state.lname}
-      </h5>
-      <h5>My favorite car brand: {state.carBrand}</h5>
-      <p>Message: {state.message}</p>
-      <h5>Is it checked? : {state.isChecked ? "Yes" : "No"}</h5>
-      <h5>Gender Selected : {state.gender}</h5>
-      <h5>Price : ${state.price}</h5>
-    </div>
-    </form>
-  );
+interface Values {
+  taskName: string;
+  description: string;
+  dueDate: string;
 }
+
+const AddTask = () => {
+  return (
+    <body style={{ backgroundColor: "#846a91", width: "75%vw", minHeight: "75%vw", padding: "12px 20px",
+    margin: "8px 0"}}>
+    <div class="frm_flex">
+      <h1>Add new Todo!!</h1>
+      <Formik
+        initialValues={{
+          taskName: '',
+          description: '',
+          dueDate: '',
+        }}
+        onSubmit={(
+          values: Values,
+          { setSubmitting }: FormikHelpers<Values>
+        ) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 500);
+        }}
+      >
+        <Form >
+          <label htmlFor="taskName">Task Name</label>
+          <Field id="taskName" name="taskName" placeholder="Todo" />
+
+          <label htmlFor="decription">Desciption</label>
+          <Field id="description" name="description" placeholder="I need todo this!" />
+
+          <label htmlFor="dueDate">dueDate</label>
+          <Field id="dueDate" name="dueDate" placeholder="11/02/2022" />
+
+          <button type="submit">Submit</button>
+        </Form>
+      </Formik>
+    </div>
+    </body>
+  );
+};
+
+ReactDOM.render(<AddTask />, document.getElementById('root'));
 
 export default AddTask;

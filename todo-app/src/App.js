@@ -27,6 +27,7 @@ function App() {
       <row>
       <Navigation />
       <main>
+        <body>
       <Switch>
         <Route path ="/Login" component= {Login}/>
         <Route path ="/Todo" component= {Todo}/>
@@ -34,6 +35,7 @@ function App() {
         <Route path ="/Budget" component={Budget}/>
         <Route path ="/AddTask" component={AddTask}/>
       </Switch>
+        </body>
       </main>
     </row>
 

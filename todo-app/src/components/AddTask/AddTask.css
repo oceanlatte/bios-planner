@@ -14,17 +14,14 @@
 
 }
 
-.form {
+body {
   background-color: var(--todo-background);
   border-radius: 25px;
   text-align: center;
-  justify-content: space-around;
+  height: inherit;
 }
 
-
 label {
-  text-align: center;
-  justify-content: space-around;
 
 }
 
@@ -33,6 +30,7 @@ input[type=text] {
   background-position: 10px 10px;
   background-repeat: no-repeat;
   padding-left: 40px;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
