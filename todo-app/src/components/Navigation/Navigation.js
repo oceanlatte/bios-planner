@@ -39,6 +39,11 @@ function Navigation(props) {
               Add Task
             </Link>
           </li>
+          <li class= "right">
+            <Link class="nav-link active tab4" to="/AddBudget">
+              Add Budget
+            </Link>
+          </li>
             
           
         </ul>

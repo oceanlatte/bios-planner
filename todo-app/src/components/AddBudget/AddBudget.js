@@ -5,12 +5,11 @@ import { Formik, Field, Form, FormikHelpers } from 'formik';
 
 
 interface Values {
-  taskName: string;
-  description: string;
-  dueDate: string;
+  amount: string;
+  category: string;
 }
 
-const AddTask = () => {
+const AddBudget = () => {
   return (
     <body style={{ backgroundColor: "#846a91", width: "75%vw", minHeight: "75%vw", padding: "12px 20px",
     margin: "8px 0"}}>
@@ -18,9 +17,8 @@ const AddTask = () => {
       <h1>Add new Todo!!</h1>
       <Formik
         initialValues={{
-          taskName: '',
-          description: '',
-          dueDate: '',
+          amount: '',
+          category: '',
         }}
         onSubmit={(
           values: Values,
@@ -33,9 +31,8 @@ const AddTask = () => {
         }}
       >
         <Form >
-          <Field id="taskName" name="taskName" placeholder=" Add: Todo" />
-          <Field id="description" name="description" placeholder="Add Description: I need todo this!" label= "Description" />
-          <Field id="dueDate" name="dueDate" placeholder="Add Due Date: 11/02/2022" />
+          <Field id="amount" name="amount" placeholder=" Enter Amount: 9999.99" />
+          <Field id="category" name="category" placeholder="This will be a dropdown: you pick on from array of items" />
           <button type="submit">Submit</button>
         </Form>
       </Formik>
@@ -44,6 +41,6 @@ const AddTask = () => {
   );
 };
 
-ReactDOM.render(<AddTask />, document.getElementById('root'));
+ReactDOM.render(<AddBudget />, document.getElementById('root'));
 
-export default AddTask;
+export default AddBudget;

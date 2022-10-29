@@ -17,6 +17,7 @@ import Monthly from "./components/Monthly/Monthly.js";
 import Navigation from "./components/Navigation/Navigation.js";
 import Budget from "./components/Budget/Budget.js";
 import AddTask from "./components/AddTask/AddTask.js"
+import AddBudget from "./components/AddBudget/AddBudget.js";
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path ="/Monthly" component= {Monthly}/>
         <Route path ="/Budget" component={Budget}/>
         <Route path ="/AddTask" component={AddTask}/>
+        <Route path ="/AddBudget" component ={AddBudget}/>
       </Switch>
         </body>
       </main>
