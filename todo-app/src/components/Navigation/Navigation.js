@@ -20,6 +20,11 @@ function Navigation(props) {
             </Link>
           </li>
           <li class= "right">
+            <Link class="nav-link active tab2" to="/Home">
+              Home
+            </Link>
+          </li>
+          <li class= "right">
             <Link class="nav-link active tab2" to="/Todo">
               Todo
             </Link>
@@ -33,18 +38,7 @@ function Navigation(props) {
             <Link class="nav-link active tab4" to="/Budget">
               Budget
             </Link>
-          </li>
-          <li class= "right">
-            <Link class="nav-link active tab4" to="/AddTask">
-              Add Task
-            </Link>
-          </li>
-          <li class= "right">
-            <Link class="nav-link active tab4" to="/AddBudget">
-              Add Budget
-            </Link>
-          </li>
-            
+          </li>           
           
         </ul>
         </div>

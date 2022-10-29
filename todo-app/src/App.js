@@ -10,7 +10,7 @@ import "./App.css";
 
 import Footer from "./components/Footer/Footer.js";
 
-import Header from "./components/Header/Header.js";
+import Home from "./components/Home/Home.js";
 import Login from "./components/Login/Login.js";
 import Todo from "./components/Todo/Todo.js";
 import Monthly from "./components/Monthly/Monthly.js";
@@ -31,6 +31,7 @@ function App() {
         <body>
       <Switch>
         <Route path ="/Login" component= {Login}/>
+        <Route path ="/Home" component= {Home}/>
         <Route path ="/Todo" component= {Todo}/>
         <Route path ="/Monthly" component= {Monthly}/>
         <Route path ="/Budget" component={Budget}/>
