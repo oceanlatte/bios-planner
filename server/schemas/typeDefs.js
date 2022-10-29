@@ -39,6 +39,7 @@ const typeDefs = gql`
     }
 
     type Query {
+        users: [User]
         currentUser(username: String): User
         todos(username: String): [Todos]
         singleTodo(_id: ID!): Todos
@@ -47,20 +48,20 @@ const typeDefs = gql`
 
     type Mutation {
         addUser(username: String!, email: String!, password: String!): User
-        addTodos(todoName: String!, recurrence: String!, dailyReset: Boolean!): Todos
+        addTodos(todoName: String!, recurrence: String!, dailyReset: Boolean!, username: String!): Todos
         addBudgetTotal(total: Int!): Budget
         addExpense(budgetId: ID!, expenseName: String!, expenseAmount: Int!): Budget
         addIncome(budgetId: ID!, incomeAmount: Int!): Budget
-        updateUser(email: String, password: String): User
-        updateTodo(todoName: String, recurrence: String!, dailyReset: Boolean): Todos
-        updateExpense(expenseName: String, expenseAmount: String): Budget
-        updateIncome(incomeAmount: Int): Budget
-        updateBudgetTotal(total: Int): Budget
+        updateUser(userId: ID!, username: String!, email: String!): User
+        updateTodo(todoId: ID!, todoName: String, recurrence: String!, dailyReset: Boolean!, username: String): Todos
+        updateBudget(budgetId: ID!, total: Int): Budget
+        updateExpense(budgetId: ID!, expenseId: ID!, expenseName: String!, expenseAmount: Int!): Budget
+        updateIncome(budgetId: ID!, incomeAmount: Int!): Budget
         deleteUser(_id: ID!): User
         deleteSingleTodo(_id: ID!): Todos
-        deleteSingleExpense(_id: ID!): Budget
-        deleteSingleIncome(_id: ID!): Budget
         deleteBudget(_id: ID!): Budget
+        deleteSingleExpense(budgetId: ID!, expenseId: ID!): Budget
+        deleteSingleIncome(budgetId: ID!, incomeId: ID!): Budget
     }
 `;
 
