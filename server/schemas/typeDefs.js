@@ -60,8 +60,8 @@ const typeDefs = gql`
         deleteUser(_id: ID!): User
         deleteSingleTodo(_id: ID!): Todos
         deleteBudget(_id: ID!): Budget
-        deleteSingleExpense(_id: ID!): Budget
-        deleteSingleIncome(_id: ID!): Budget
+        deleteSingleExpense(budgetId: ID!, expenseId: ID!): Budget
+        deleteSingleIncome(budgetId: ID!, incomeId: ID!): Budget
     }
 `;
 

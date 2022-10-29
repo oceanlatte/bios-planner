@@ -96,7 +96,22 @@ const resolvers = {
     deleteBudget: async (parent, { _id }) => {
       return Budget.findByIdAndDelete(_id);
     },
-    
+    deleteSingleExpense: async (parent, { budgetId, expenseId }) => {
+      const deleteExpense = await Budget.findOneAndUpdate(
+        { _id: budgetId },
+        { $pull: { expenses: { _id: expenseId } } },
+        { new: true, runValidators: true }
+      );
+      return deleteExpense;
+    },
+    deleteSingleIncome: async (parent, { budgetId, incomeId }) => {
+      const deleteIncome = await Budget.findOneAndUpdate(
+        { _id: budgetId },
+        { $pull: { income: { _id: incomeId } } },
+        { new: true, runValidators: true }
+      );
+      return deleteIncome;
+    } 
   }
 };
   
