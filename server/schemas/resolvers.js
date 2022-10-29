@@ -27,6 +27,7 @@ const resolvers = {
   },
 
   Mutation: {
+    // CREATE MUTATIONS
     addUser: async (parent, args) => {
       const user = await User.create(args);
       return user;
@@ -41,7 +42,6 @@ const resolvers = {
       return total;
     },
     addExpense: async (parent, { budgetId, expenseName, expenseAmount }) => {
-      console.log("addExpense args:", budgetId, expenseName, expenseAmount);
       const expense = await Budget.findOneAndUpdate(
         { _id: budgetId },
         { $push: { expenses: { expenseName, expenseAmount } } },
@@ -49,10 +49,8 @@ const resolvers = {
       );
       return expense;
     },
-    // ?? Does income need to change the budget total here??
+    // ?? Does income need to add the budget total here??
     addIncome: async (parent, { budgetId, incomeAmount }) => {
-      console.log("addIncome args:", budgetId, incomeAmount );
-      
       const incomeCreate = await Budget.findOneAndUpdate(
         { _id: budgetId },
         { $push: { income: { incomeAmount } } },
@@ -60,8 +58,31 @@ const resolvers = {
       );
       return incomeCreate;
     },
+    // UPDATE MUTATIONS
+    updateUser: async (parent, { userId, username, email }) => {
+      console.log(username, email)
+      const user = await User.findByIdAndUpdate(userId,
+        { $set: { username: username, email: email } },
+        { new: true, runValidators: true }
+      );
+      return user;
+    },
+    updateTodo: async (parent, { todoId, ...args }) => {
+      const updateTodo = await Todos.findByIdAndUpdate(todoId,
+        { $set: { ...args } },
+        { new: true, runValidators: true }
+      );
+      return updateTodo;
+    },
+    updateBudget: async (parent, { budgetId, ...args }) => {
+      const updateBudget = await Budget.findByIdAndUpdate(budgetId,
+        { $set: { ... args } },
+        { new: true, runValidators: true }
+      );
+      return updateBudget;
+    },
+    
   }
 };
   
   module.exports = resolvers;
-  
