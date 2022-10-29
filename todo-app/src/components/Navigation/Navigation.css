@@ -22,7 +22,7 @@
 }
 
 
-.navbar li{
+.navbar li {
 font-size: 20px;
 list-style: none;
 display:inline-block;
@@ -71,14 +71,14 @@ text-align: left;
     }
 
 
-.navbar li a{
+.navbar .right a{
 text-decoration: none;
 font-size: 18px;
 padding:8px 20px;
 color: black;
 }
 
-.navbar li a:hover{
+.navbar .left a:hover{
 color:rgb(151, 7, 247);
 border: darkmagenta;
 border-radius: 2px;

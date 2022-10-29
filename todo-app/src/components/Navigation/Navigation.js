@@ -10,28 +10,33 @@ function Navigation(props) {
   return (
  <header>
   	<div class="left">
-			<a href="#">BIOS</a>
+			<a class= "left" href="#">BIOS</a>
 		</div>
   <div class="mid">
 		<ul class="navbar">
-          <li >
+          <li class= "right" >
             <Link class="nav-link active tab1" to="/Login">
               Login
             </Link>
           </li>
-          <li>
+          <li class= "right">
             <Link class="nav-link active tab2" to="/Todo">
               Todo
             </Link>
           </li>
-          <li class="tab">
+          <li class= "right">
             <Link class="nav-link active tab3" to="/Monthly">
               Monthly
             </Link>
           </li>
-          <li class="tab">
+          <li class= "right">
             <Link class="nav-link active tab4" to="/Budget">
               Budget
+            </Link>
+          </li>
+          <li class= "right">
+            <Link class="nav-link active tab4" to="/AddTask">
+              Add Task
             </Link>
           </li>
             
