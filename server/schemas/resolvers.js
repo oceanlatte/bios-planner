@@ -134,7 +134,23 @@ const resolvers = {
       throw new AuthenticationError('you need to be loggged in!');
     },
     // STILL NEED UPDATE: expenses, income
-
+    updateExpense: async (parent, args, context) => {
+      console.log (args)
+      if (context.user) {
+        const findBudget = await Budget.findById(args.budgetId);
+        console.log(findBudget);
+        
+        const upExpense = await Budget.findOneAndUpdate(
+          
+          { _id: args.expenseId},
+          { $set: { expenses: args}},
+          { new: true, runValidators: true }
+        )
+        return upExpense;
+      }
+      throw new AuthenticationError('you need to be loggged in!');
+    },
+      
     // DELETE MUTATIONS
     deleteUser: async (parent, { _id }, context) => {
       if (context.user) {
