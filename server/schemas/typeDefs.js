@@ -38,6 +38,11 @@ const typeDefs = gql`
         income: [Incomes]
     }
 
+    type Auth{
+        token: ID!
+        user: User
+    }
+
     type Query {
         users: [User]
         currentUser(username: String): User
@@ -47,7 +52,8 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        addUser(username: String!, email: String!, password: String!): User
+        addUser(username: String!, email: String!, password: String!): Auth
+        login(email: String!, password: String!): Auth
         addTodos(todoName: String!, recurrence: String!, dailyReset: Boolean!, username: String!): Todos
         addBudgetTotal(total: Int!): Budget
         addExpense(budgetId: ID!, expenseName: String!, expenseAmount: Int!): Budget
