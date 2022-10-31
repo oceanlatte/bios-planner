@@ -1,7 +1,5 @@
 import React from "react";
 
-import Card from "react-bootstrap/Card";
-
 const todos = ["Finish homework", "Wash dishes", "Clean room", "Make waffles"];
 
 const Budget = () => (

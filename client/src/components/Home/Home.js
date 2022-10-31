@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Container from "react-bootstrap/Container";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import AddTask from "../AddTask/AddTask";

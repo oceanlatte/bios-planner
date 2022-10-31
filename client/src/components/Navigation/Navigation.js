@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import styled from 'styled-components';
 import "./Navigation.css";
 
-import Container from "react-bootstrap/Container";
 
 //initialize the section state
 function Navigation(props) {
