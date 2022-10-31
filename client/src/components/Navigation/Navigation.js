@@ -1,50 +1,53 @@
-import React, { useEffect } from "react";
+import React from "react";
+import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
-import "./Navigation.css";
 
+function Navigation() {
 
-//initialize the section state
-function Navigation(props) {
-  return (
- <header>
-  	<div class="left">
-			<a class= "left" href="#">BIOS</a>
-		</div>
-  <div class="mid">
-		<ul class="navbar">
-          <li class= "right" >
-            <Link class="nav-link active tab1" to="/Login">
+  function showNavigation() {
+    if (Auth.loggedIn()) {
+      return (
+        <ul className="flex-row">
+          <li className="mx-1">
+            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+            <a href="/" onClick={() => Auth.logout()}>
+              Logout
+            </a>
+          </li>
+        </ul>
+      );
+    } else {
+      return (
+        <ul className="flex-row">
+          <li className="mx-1">
+            <Link to="/signup">
+              Signup
+            </Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/login">
               Login
             </Link>
           </li>
-          <li class= "right">
-            <Link class="nav-link active tab2" to="/Home">
-              Home
-            </Link>
-          </li>
-          <li class= "right">
-            <Link class="nav-link active tab2" to="/Todo">
-              Todo
-            </Link>
-          </li>
-          <li class= "right">
-            <Link class="nav-link active tab3" to="/Monthly">
-              Monthly
-            </Link>
-          </li>
-          <li class= "right">
-            <Link class="nav-link active tab4" to="/Budget">
-              Budget
-            </Link>
-          </li>           
-          
         </ul>
-        </div>
-      </header>
-  );
-};
+      );
+    }
+  }
 
-        
-        
+  return (
+    <header className="flex-row px-1">
+      <h1>
+        <Link to="/">
+          <span ></span>
+          BIOS
+        </Link>
+      </h1>
+
+      <nav>
+        {showNavigation()}
+      </nav>
+    </header>
+  );
+}
 
 export default Navigation;
