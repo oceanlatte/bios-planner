@@ -171,3 +171,123 @@ mutation UpdateExpense($budgetId: ID!, $expenseId: ID!, $expenseName: String!, $
 }
 `
 
+export const UPDATE_INCOME = gql`
+mutation UpdateIncome($budgetId: ID!, $incomeAmount: Int!) {
+  updateIncome(budgetId: $budgetId, incomeAmount: $incomeAmount) {
+    _id
+    total
+    expenses {
+      _id
+      expenseName
+      expenseAmount
+    }
+    income {
+      _id
+      incomeAmount
+    }
+  }
+}
+`;
+
+export const DELETE_USER = gql`
+mutation DeleteUser($id: ID!) {
+  deleteUser(_id: $id) {
+    _id
+    username
+    email
+    todos {
+      _id
+      todoName
+      createdAt
+      username
+      recurrence
+      dailyReset
+    }
+    budget {
+      _id
+      total
+      expenses {
+        _id
+        expenseName
+        expenseAmount
+      }
+      income {
+        _id
+        incomeAmount
+      }
+    }
+  }
+}
+`;
+
+export const DELETE_SINGLE_TODO = gql`
+mutation DeleteSingleTodo($id: ID!) {
+  deleteSingleTodo(_id: $id) {
+    _id
+    todoName
+    createdAt
+    username
+    recurrence
+    dailyReset
+  }
+}
+`
+
+export const DELETE_BUDGET = gql`
+mutation DeleteBudget($id: ID!) {
+  deleteBudget(_id: $id) {
+    _id
+    total
+    expenses {
+      _id
+      expenseName
+      expenseAmount
+    }
+    income {
+      _id
+      incomeAmount
+    }
+  }
+}
+`
+
+export const DELETE_SINGLE_EXPENSE = gql`
+mutation DeleteSingleExpense($budgetId: ID!, $expenseId: ID!) {
+  deleteSingleExpense(budgetId: $budgetId, expenseId: $expenseId) {
+    _id
+    total
+    expenses {
+      _id
+      expenseName
+      expenseAmount
+    }
+    income {
+      _id
+      incomeAmount
+    }
+  }
+}
+`
+
+export const DELETE_SINGLE_INCOME = gql`
+mutation DeleteSingleIncome($budgetId: ID!, $incomeId: ID!) {
+  deleteSingleIncome(budgetId: $budgetId, incomeId: $incomeId) {
+    _id
+    total
+    expenses {
+      _id
+      expenseName
+      expenseAmount
+    }
+    income {
+      _id
+      incomeAmount
+    }
+  }
+}
+`
+
+
+
+
+
