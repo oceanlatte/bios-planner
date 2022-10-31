@@ -3,7 +3,7 @@ import React from "react";
 const todos = ["Finish homework", "Wash dishes", "Clean room", "Make waffles"];
 
 const Budget = () => (
-    <div class = "card">
+    <div className = "card">
         <div><h3>Budget</h3></div>
   <ul>
     {todos.map(task => (

@@ -13,7 +13,7 @@ const AddBudget = () => {
   return (
     <body style={{ backgroundColor: "#846a91", width: "75%vw", minHeight: "75%vw", padding: "12px 20px",
     margin: "8px 0"}}>
-    <div class="frm_flex">
+    <div className="frm_flex">
       <h1>Add new Todo!!</h1>
       <Formik
         initialValues={{
