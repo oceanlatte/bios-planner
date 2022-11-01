@@ -25,7 +25,7 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_TODOS = gql`
-    mutation AddTodos($todoName: String!, $recurrence: String!, $dailyReset: Boolean!, $username: String!) {
+    mutation addTodos($todoName: String!, $recurrence: String!, $dailyReset: Boolean!, $username: String!) {
   addTodos(todoName: $todoName, recurrence: $recurrence, dailyReset: $dailyReset, username: $username) {
     _id
     todoName

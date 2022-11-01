@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Zilla+Slab&display=swap');
+
 :root {
   --main-background: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
   --orange-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
@@ -6,7 +8,7 @@
   --lightest-orange: #fbdcd0;
   --light-orange1: #f39d7c;
   --app-name: #f39d7c;
-  --dark-orange: #f39d7c;
+  --dark-orange: #f0865c;
   --todo-background: #846a91;
   --nav-bar: #75638d;
   --budget-background: #392646;

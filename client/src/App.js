@@ -18,6 +18,8 @@ import Todo from './components/Todo/Todo';
 import Budget from './components/Budget/Budget';
 import Monthly from './components/Monthly/Monthly';
 
+import './App.css';
+
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
@@ -46,11 +48,11 @@ function App() {
           <div className="container">
             <Routes>
               <Route 
-                path="/Home" 
+                path="/home" 
                 element={<Home />} 
               />
               <Route 
-                path="/Profile" 
+                path="/profile" 
                 element={<Profile />} 
               />
               <Route 
@@ -62,15 +64,15 @@ function App() {
                 element={<Signup />} 
               />
                   <Route 
-                path="/Todo" 
+                path="/todo" 
                 element={<Todo />} 
               />   
               <Route 
-              path="/Monthly" 
+              path="/monthly" 
               element={<Monthly />} 
             />    
             <Route 
-            path="/Budget" 
+            path="/budget" 
             element={<Budget />} 
           />
 

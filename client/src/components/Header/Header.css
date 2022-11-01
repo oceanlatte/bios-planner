@@ -6,12 +6,11 @@
   --lightest-orange: #fbdcd0;
   --light-orange1: #f6baa2;
   --app-name: #f39d7c;
-  --dark-orange: #f39d7c;
+  --dark-orange: #f0865c;
   --todo-background: #846a91;
   --nav-bar: #75638d;
   --budget-background: #392646;
   --magenta: #660066;
-
 }
 
 .mid {
@@ -63,7 +62,7 @@ text-align: left;
 
   .tab4 {
     border-radius: 6px 6px 0 0; 
-     background-color: var(--nav-bar);
+     background-color: var(--todo-background);
      border-color: black;
     border-style: solid;
     border-width: thin;
