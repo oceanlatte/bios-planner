@@ -23,7 +23,10 @@ const Header = () => {
               <Link class= " tab1 right" to="/login">Login</Link>
               <Link class= " tab2 right"to="/signup">Signup</Link>
               <Link class= " tab3 right"to="/Todo">Todo</Link>
-              <Link class= " tab4 right"to="/Monthly">Monthly</Link>
+              <Link class= " tab4 right"to="/Daily">Daily</Link>
+              <Link class= " tab5 right"to="/Weekly">Weekly</Link>
+              <Link class= " tab6 right"to="/Monthly">Monthly</Link>
+              <Link class= " tab7 right"to="/Yearly">Yearly</Link>
               <Link class= " tab1 right"to="/Budget">Budget</Link>
               <a class= " tab1 right" href="/" onClick={logout}>
                 Logout
