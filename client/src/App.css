@@ -32,6 +32,9 @@ li {
   color: var(--magenta);
 } */
 
+a {
+  color: black;
+}
 
 .card {
   background-color: var(--budget-background);

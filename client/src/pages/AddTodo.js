@@ -1,46 +1,39 @@
-import 'react-app-polyfill/ie11';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Formik, Field, Form, FormikHelpers } from 'formik';
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { ADD_TODOS } from '../utils/mutations';
 
-
-interface Values {
-  taskName: string;
-  description: string;
-  dueDate: string;
-}
 
 const AddTodo = () => {
+  // const [formState, setFormState] = useState({ todoName: '', recurrence: '', dailyReset: ''});
+  // const [addSingleTodo, { error }] = useMutation(ADD_TODOS);
+
+  // update state based on form input
+  // const handleFormInput = (e) => {
+  //   console.log('hello');
+  // }
+
   return (
-    <body style={{ backgroundColor: "#846a91", width: "75%vw", minHeight: "75%vw", padding: "12px 20px",
-    margin: "8px 0"}}>
-    <div className="frm_flex">
-      <h1>Add new Todo!!</h1>
-      <Formik
-        initialValues={{
-          taskName: '',
-          description: '',
-          dueDate: '',
-        }}
-        onSubmit={(
-          values: Values,
-          { setSubmitting }: FormikHelpers<Values>
-        ) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 500);
-        }}
-      >
-        <Form >
-          <Field id="taskName" name="taskName" placeholder=" Add: Todo" />
-          <Field id="description" name="description" placeholder="Add Description: I need todo this!" label= "Description" />
-          <Field id="dueDate" name="dueDate" placeholder="Add Due Date: 11/02/2022" />
-          <button type="submit">Submit</button>
-        </Form>
-      </Formik>
+    <div className='card'>
+      <h1>Add A New Todo ✏️</h1>
+        <label for='todo-recurrent'> 
+          Recurrence Type:
+        </label>
+
+        <select name='todo-menu' id='todo-recurrent'>
+          <option value='daily'>Daily</option>
+          <option value='weekly'>Weekly</option>
+          <option value='monthly'>Monthly</option>
+          <option value='yearly'>Yearly</option>
+        </select>
+        
+        {/* !!!!!!!!! */}
+        {/* ADD A CONDITIONAL: if user choses 'Daily' then show this dropdown */}
+        <p>Reset Daily?</p>
+        <input type="radio" id="reset" name="daily-reset" value="yes" />
+        <label for="yes">Yes</label>
+        <input type="radio" id="reset" name="daily-reset" value="no" />
+        <label for="yes">No</label> 
     </div>
-    </body>
   );
 };
 

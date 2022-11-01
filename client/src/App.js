@@ -20,6 +20,8 @@ import Monthly from "./pages/Monthly";
 import Yearly from "./pages/Yearly";
 import AddBudget from "./pages/AddBudget";
 import AddTodo from "./pages/AddTodo";
+import AddIncome from "./pages/AddIncome";
+import AddExpense from "./pages/AddExpense";
 
 import "./App.css";
 
@@ -60,6 +62,8 @@ function App() {
               <Route path="/yearly" element={<Yearly />} />
               <Route path="/add-budget" element={<AddBudget />} />
               <Route path="/add-todos" element={<AddTodo />} />
+              <Route path="/add-expense" element={<AddExpense />} />
+              <Route path="/add-income" element={<AddIncome />} />
             </Routes>
           </div>
         </div>
