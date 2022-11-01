@@ -8,10 +8,14 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+import Header from './components/Header/Header';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import Todo from './components/Todo/Todo';
+import Budget from './components/Budget/Budget';
+import Monthly from './components/Monthly/Monthly';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -37,11 +41,11 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
-          
+        <Header />
           <div className="container">
             <Routes>
               <Route 
-                path="/" 
+                path="/Home" 
                 element={<Home />} 
               />
               <Route 
@@ -52,6 +56,18 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
               />
+                  <Route 
+                path="/Todo" 
+                element={<Todo />} 
+              />   
+              <Route 
+              path="/Monthly" 
+              element={<Monthly />} 
+            />    
+            <Route 
+            path="/Budget" 
+            element={<Signup />} 
+          />
 
             </Routes>
           </div>
