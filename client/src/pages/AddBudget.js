@@ -14,7 +14,7 @@ const AddBudget = () => {
     <body style={{ backgroundColor: "#846a91", width: "75%vw", minHeight: "75%vw", padding: "12px 20px",
     margin: "8px 0"}}>
     <div className="frm_flex">
-      <h1>Add new Todo!!</h1>
+      <h1>Add new Budget!!</h1>
       <Formik
         initialValues={{
           amount: '',
@@ -41,6 +41,6 @@ const AddBudget = () => {
   );
 };
 
-ReactDOM.render(<AddBudget />, document.getElementById('root'));
+// ReactDOM.render(<AddBudget />, document.getElementById('root'));
 
 export default AddBudget;
