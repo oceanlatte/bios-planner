@@ -8,16 +8,16 @@ const Profile = () => {
   return (
     <div>
       <Link to={'/add-todos'}>
-          <button>Add Todo</button>
+          <button class="addBtn todoBtn">Add Todo</button>
       </Link>
       <Link to={'/add-budget'}>
-        <button>Add Budget Total</button>
+        <button class="addBtn budgetTotalBtn">Add Budget Total</button>
       </Link>
       <Link to={'/add-budget'}>
-        <button>Add Budget Expense</button>
+        <button class="addBtn budgetExpenseBtn">Add Budget Expense</button>
       </Link>
       <Link to={'/add-budget'}>
-        <button>Add Budget Income</button>
+        <button class="addBtn budgetIncomeBtn">Add Budget Income</button>
       </Link>
 
       <Budget />

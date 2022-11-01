@@ -18,6 +18,7 @@
 
 body {
   background-image: var(--main-background);
+  height: 100vh;
 }
 
 h2 {
@@ -37,9 +38,38 @@ li {
   background-color: var(--budget-background);
   width: 25% ;
   color: var(--font-color);
-  border-radius: 25px;
+  border-radius: 15px;
+  padding-bottom: 5px;
 }
 
+.title {
+  background-color: #f0865c;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.addBtn {
+  padding: 5px;
+  border-radius: 15px;
+  border-width: 1px;
+}
+
+.todoBtn {
+background-color: #f0865c;
+}
+
+.budgetTotalBtn {
+background-color: #f39d7c;
+}
+
+.budgetExpenseBtn {
+background-color: #392646;
+color: white;
+}
+
+.budgetIncomeBtn {
+background-color: #5f3e74;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
