@@ -22,7 +22,7 @@
 }
 
 
-.navbar li {
+nav {
 font-size: 20px;
 list-style: none;
 display:inline-block;
@@ -71,27 +71,27 @@ text-align: left;
     }
 
 
-.navbar .right a{
+nav .right {
 text-decoration: none;
 font-size: 18px;
 padding:8px 20px;
 color: black;
 }
 
-.navbar .left a:hover{
+nav .left:hover{
 color:rgb(151, 7, 247);
 border: darkmagenta;
 border-radius: 2px;
 font-size: 25px;
 }
 
-.navbar li a:active{
+nav:active{
 border-color: #660066;
 border-width: thick;
 }
 
 
-.left {
+nav .left {
 display: inline-block;
 width: 20%;
 font-size: 30px;

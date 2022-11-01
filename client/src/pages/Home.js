@@ -1,12 +1,10 @@
 import React from "react";
-import Todo from "../components/Todo/Todo";
-import Budget from "../components/Budget/Budget";
+
 
 const Home = () => {
   return (
-    <div className="container">
-      <Budget />
-      <Todo />
+    <div className="container" style="background-image:url('https://www.freepik.com/free-vector/gradient-lo-fi-illustrations_23987053.htm#query=lofi&position=1&from_view=keyword')">
+
     </div>
   );
 };
