@@ -71,6 +71,17 @@ color: white;
 background-color: #5f3e74;
 }
 
+.inputBox {
+  border-radius: 15px;
+  padding-left: 5px;
+}
+
+.submitBtn {
+  background-color: #f0865c;
+  color: white;
+  align-content: center;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
