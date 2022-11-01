@@ -14,10 +14,10 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Todo from "./components/Todo/Todo";
-import Budget from "./components/Budget/Budget";
-import Monthly from "./components/Monthly/Monthly";
 import Daily from "./pages/Daily";
+import Weekly from "./pages/Weekly";
+import Monthly from "./pages/Monthly";
+import Yearly from "./pages/Yearly";
 import AddBudget from "./pages/AddBudget";
 import AddTodo from "./pages/AddTodo";
 
@@ -54,10 +54,10 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-              <Route path="/todo" element={<Todo />} />
               <Route path="/daily" element={<Daily />} />
+              <Route path="/weekly" element={<Weekly />} />
               <Route path="/monthly" element={<Monthly />} />
-              <Route path="/budget" element={<Budget />} />
+              <Route path="/yearly" element={<Yearly />} />
               <Route path="/add-budget" element={<AddBudget />} />
               <Route path="/add-todos" element={<AddTodo />} />
             </Routes>

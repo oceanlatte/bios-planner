@@ -41,6 +41,4 @@ const AddBudget = () => {
   );
 };
 
-// ReactDOM.render(<AddBudget />, document.getElementById('root'));
-
 export default AddBudget;

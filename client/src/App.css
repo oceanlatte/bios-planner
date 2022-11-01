@@ -10,31 +10,34 @@
   --app-name: #f39d7c;
   --dark-orange: #f0865c;
   --todo-background: #846a91;
-  --nav-bar: #75638d;
+  --nav-bar: #5f3e74;
   --budget-background: #392646;
   --magenta: #660066;
 
 }
 
+body {
+  background-image: var(--main-background);
+}
+
 h2 {
-  color: #eeeeee;
+  color: black;
 }
 
 li {
   color: #eeeeee;
 }
 
-p{
+/* p {
   color: var(--magenta);
-}
+} */
 
 
 .card {
   background-color: var(--budget-background);
   width: 25% ;
-  color: var(--light-orange1);
+  color: var(--font-color);
   border-radius: 25px;
-  
 }
 
 

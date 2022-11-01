@@ -4,7 +4,6 @@ import * as ReactDOM from 'react-dom';
 import { Formik, Field, Form, FormikHelpers } from 'formik';
 
 
-
 interface Values {
   taskName: string;
   description: string;
@@ -44,7 +43,5 @@ const AddTodo = () => {
     </body>
   );
 };
-
-ReactDOM.render(<AddTodo />, document.getElementById('root'));
 
 export default AddTodo;

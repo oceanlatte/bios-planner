@@ -1,110 +1,140 @@
 :root {
-  --main-background: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
-  --orange-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
-  --purple-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
-  --font-color: #EEEEEE;
+  --main-background: linear-gradient(
+    to right bottom,
+    #eeeeee,
+    #d8d8d8,
+    #c3c3c3,
+    #aeaeae,
+    #999999
+  );
+  --orange-gradient: linear-gradient(
+    to bottom,
+    #f39d7c,
+    #f6ad90,
+    #f9bda5,
+    #faccba,
+    #fbdcd0
+  );
+  --purple-gradient: linear-gradient(
+    to bottom,
+    #f39d7c,
+    #f6ad90,
+    #f9bda5,
+    #faccba,
+    #fbdcd0
+  );
+  --font-color: #eeeeee;
   --lightest-orange: #fbdcd0;
   --light-orange1: #f6baa2;
   --app-name: #f39d7c;
   --dark-orange: #f0865c;
   --todo-background: #846a91;
-  --nav-bar: #75638d;
+  --nav-bar: #5f3e74;
   --budget-background: #392646;
   --magenta: #660066;
 }
 
-.mid {
-	display: inline-block;
-	width: 75%;
-	margin: auto;
-
+a {
+  text-decoration: none;
+  color: black;
 }
 
+.mid {
+  display: inline-block;
+  width: 75%;
+  margin: auto;
+}
 
 nav {
-font-size: 20px;
-list-style: none;
-display:inline-block;
-border-radius: 6px 6px 0 0;  
-white-space: nowrap;  
-cursor: pointer;  
-border-color: black;
-border-style: solid;
-border-width: thin;
-text-align: left;
+  font-size: 20px;
+  list-style: none;
+  display: inline-block;
+  border-radius: 6px 6px 0 0;
+  white-space: nowrap;
+  cursor: pointer;
+  border: black solid 1px;
+  text-align: left;
 }
 
 .tab1 {
-border-radius: 6px 6px 0 0; 
- background-color: var(--dark-orange);
- border-color: black;
-border-style: solid;
-border-width: thin;
-text-align: left;
+  border-radius: 6px 6px 0 0;
+  background-color: var(--dark-orange);
+  border: black solid 1px;
+  text-align: left;
 }
 
 .tab2 {
-  border-radius: 6px 6px 0 0; 
-   background-color: var(--light-orange1);
-   border-color: black;
-  border-style: solid;
-  border-width: thin;
+  border-radius: 6px 6px 0 0;
+  background-color: var(--light-orange1);
+  border: black solid 1px;
   text-align: left;
-  }
-  .tab3 {
-  border-radius: 6px 6px 0 0; 
-   background-color: var(--lightest-orange);
-   border-color: black;
-  border-style: solid;
-  border-width: thin;
+}
+.tab3 {
+  border-radius: 6px 6px 0 0;
+  background-color: var(--lightest-orange);
+  border: black solid 1px;
   text-align: left;
-  }
+}
 
-  .tab4 {
-    border-radius: 6px 6px 0 0; 
-     background-color: var(--todo-background);
-     border-color: black;
-    border-style: solid;
-    border-width: thin;
-    text-align: left;
-    }
+.tab4 {
+  border-radius: 6px 6px 0 0;
+  background-color: var(--todo-background);
+  border: black solid 1px;
+  text-align: left;
+}
+
+.tab5 {
+  border-radius: 6px 6px 0 0;
+  background-color: var(--nav-bar);
+  border: black solid 1px;
+  text-align: left;
+}
+
+.logout {
+  border-radius: 6px 6px 0 0;
+  background-color: var(--budget-background);
+  border: black solid 1px;
+  text-align: left;
+  color: var(--font-color);
+
+}
+
+.logout a {
+  color: var(--font-color);
+}
 
 
 nav .right {
-text-decoration: none;
-font-size: 18px;
-padding:8px 20px;
-color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 20px;
 }
 
-nav .left:hover{
-color:rgb(151, 7, 247);
-border: darkmagenta;
-border-radius: 2px;
-font-size: 25px;
+/* nav .left:hover {
+  color: rgb(151, 7, 247);
+  border: darkmagenta;
+  border-radius: 2px;
+  font-size: 25px;
 }
 
-nav:active{
-border-color: #660066;
-border-width: thick;
-}
-
+nav:active {
+  border-color: #660066;
+  border-width: thick;
+} */
 
 nav .left {
-display: inline-block;
-width: 20%;
-font-size: 30px;
-padding: 18px 17px;
-color: var(--app-name)
-
-
+  display: inline-block;
+  width: 20%;
+  font-size: 30px;
+  padding: 18px 17px;
+  color: var(--app-name);
 }
 
-.left a{
-text-decoration:none;
-color: var(--app-name)
+.left a {
+  text-decoration: none;
+  color: var(--app-name);
 }
 
-.left:hover{
-font-weight:bolder;
+.left:hover {
+  font-weight: bolder;
 }
