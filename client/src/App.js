@@ -71,7 +71,7 @@ function App() {
             />    
             <Route 
             path="/Budget" 
-            element={<Signup />} 
+            element={<Budget />} 
           />
 
             </Routes>

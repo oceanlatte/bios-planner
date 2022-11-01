@@ -10,7 +10,7 @@ interface Values {
   dueDate: string;
 }
 
-const AddTask = () => {
+const AddTodo = () => {
   return (
     <body style={{ backgroundColor: "#846a91", width: "75%vw", minHeight: "75%vw", padding: "12px 20px",
     margin: "8px 0"}}>
@@ -44,6 +44,6 @@ const AddTask = () => {
   );
 };
 
-ReactDOM.render(<AddTask />, document.getElementById('root'));
+ReactDOM.render(<AddTodo />, document.getElementById('root'));
 
-export default AddTask;
+export default AddTodo;
