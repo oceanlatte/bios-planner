@@ -4,8 +4,8 @@ font-family: 'Zilla Slab', serif */
 
 :root {
   --main-background: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
-  --orange-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
-  --purple-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
+  --orange-gradient: linear-gradient(to top, #f0865c, #f18c64, #f2926c, #f29774, #f39d7c);
+  --purple-gradient: linear-gradient(to bottom, #392646, #4b3658, #5d476a, #70587d, #846a91);
   --font-color: #EEEEEE;
   --lightest-orange: #fbdcd0;
   --light-orange1: #f39d7c;
@@ -21,7 +21,7 @@ font-family: 'Zilla Slab', serif */
 
 body {
   background-image: var(--main-background);
-  min-height: 100vh;
+  min-height: 100vmax;
   height: fit-content;
   max-height: max-content;
   font-family: var(--body-font);
@@ -51,11 +51,12 @@ a {
 /* UTILS styling */
 .card {
   background-color: var(--budget-background);
-  width: 25%;
+  width: 30%;
   color: var(--font-color);
   border-radius: 15px;
   margin-top: 25px;
   padding-bottom: 5px;
+  padding: 0 15px 5px 15px;
 }
 
 .title {
@@ -77,6 +78,21 @@ a {
   color: white;
 }
 
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.block {
+  display: block;
+  height: fit-content;
+}
+
+.header-block {
+  padding: 30px;
+  color: var(--budget-background);
+}
+
 /* Button Styling */
 
 .submit-btn {
@@ -85,7 +101,7 @@ a {
 }
 
 .add-btn {
-  padding: 5px;
+  padding: 5px 15px;
   border-radius: 15px;
   border-width: 1px;
 }
@@ -96,20 +112,39 @@ a {
 }
 
 .todoBtn {
-background-color: #f0865c;
+/* background-color: #f0865c; */
+background-image: var(--orange-gradient);
 }
 
 .budgetTotalBtn {
-background-color: #f39d7c;
+/* background-color: #f39d7c; */
+background-image: var(--orange-gradient);
 }
 
 .budgetExpenseBtn {
-background-color: #392646;
+/* background-color: #392646; */
+background-image: var(--purple-gradient);
 color: white;
 }
 
 .budgetIncomeBtn {
-background-color: #5f3e74;
+/* background-color: #5f3e74; */
+background-image: var(--purple-gradient);
+color: white;
+
+}
+
+.add-btn-list {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-around;
+}
+
+/* Profile styling  */
+.profile-container {
+  display: block;
+  width: 100%;
+  
 }
 
 /* Forms Styling  */

@@ -8,9 +8,13 @@ function Daily() {
   
   return (
     <div>
-      <h2 className="title">Daily</h2>
-      <Budget />
-      <Todo />
+      <h2 className="title header-block">Daily</h2>
+    
+      <div className="container">
+        <Budget />
+        <Todo />
+      </div>
+
     </div>
   )
 };

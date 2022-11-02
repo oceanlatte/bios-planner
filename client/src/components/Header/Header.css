@@ -51,7 +51,7 @@ a {
 
 header {
   width: 100%;
-  padding-top: 15px;
+  padding-top: 18px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -65,6 +65,8 @@ header {
   display: inline-block;
   margin-bottom: 0;
   color: var(--dark-orange);
+  font-weight: bold;
+  padding: 0 25px;
 }
 
 nav {

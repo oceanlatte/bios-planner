@@ -4,9 +4,11 @@ import Budget from "../components/Budget/Budget";
 function Monthly() {
   return (
     <div>
-      <h2 className="title">Monthly</h2>
-      <Budget />
-      <Todo />
+      <h2 className="header-block title">Monthly</h2>
+      <div className="container">
+        <Budget />
+        <Todo />
+      </div>
     </div>
   )
 };
