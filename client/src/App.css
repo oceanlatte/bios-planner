@@ -1,13 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Zilla+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&family=Zilla+Slab&display=swap");
 /* font-family: 'Ubuntu', sans-serif;
 font-family: 'Zilla Slab', serif */
 
 :root {
   --img-background: url(../public/6876899.jpg);
-  --main-background: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
-  --orange-gradient: linear-gradient(to top, #f0865c, #f18c64, #f2926c, #f29774, #f39d7c);
-  --purple-gradient: linear-gradient(to bottom, #392646, #4b3658, #5d476a, #70587d, #846a91);
-  --font-color: #EEEEEE;
+  --main-background: linear-gradient(
+    to right bottom,
+    #eeeeee,
+    #d8d8d8,
+    #c3c3c3,
+    #aeaeae,
+    #999999
+  );
+  --orange-gradient: linear-gradient(
+    to top,
+    #f0865c,
+    #f18c64,
+    #f2926c,
+    #f29774,
+    #f39d7c
+  );
+  --purple-gradient: linear-gradient(
+    to bottom,
+    #392646,
+    #4b3658,
+    #5d476a,
+    #70587d,
+    #846a91
+  );
+  --font-color: #eeeeee;
   --lightest-orange: #fbdcd0;
   --light-orange1: #f39d7c;
   --app-name: #f39d7c;
@@ -16,8 +37,8 @@ font-family: 'Zilla Slab', serif */
   --nav-bar: #5f3e74;
   --budget-background: #392646;
   --magenta: #660066;
-  --body-font: 'Ubuntu', sans-serif;
-  --header-font: 'Zilla Slab', serif;
+  --body-font: "Ubuntu", sans-serif;
+  --header-font: "Zilla Slab", serif;
 }
 
 body {
@@ -30,7 +51,10 @@ body {
   background-size: cover;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--header-font);
 }
 
@@ -95,7 +119,7 @@ a {
 }
 
 .header-block {
-  padding: 10px ;
+  padding: 10px;
   opacity: 90%;
   margin: 15px 20px 0 20px;
   color: var(--font-color);
@@ -120,26 +144,25 @@ a {
 }
 
 .todoBtn {
-/* background-color: #f0865c; */
-background-image: var(--orange-gradient);
+  /* background-color: #f0865c; */
+  background-image: var(--orange-gradient);
 }
 
 .budgetTotalBtn {
-/* background-color: #f39d7c; */
-background-image: var(--orange-gradient);
+  /* background-color: #f39d7c; */
+  background-image: var(--orange-gradient);
 }
 
 .budgetExpenseBtn {
-/* background-color: #392646; */
-background-image: var(--purple-gradient);
-color: white;
+  /* background-color: #392646; */
+  background-image: var(--purple-gradient);
+  color: white;
 }
 
 .budgetIncomeBtn {
-/* background-color: #5f3e74; */
-background-image: var(--purple-gradient);
-color: white;
-
+  /* background-color: #5f3e74; */
+  background-image: var(--purple-gradient);
+  color: white;
 }
 
 .add-btn-list {
@@ -153,7 +176,6 @@ color: white;
 .profile-container {
   display: block;
   width: 100%;
-  
 }
 
 /* Forms Styling  */
@@ -169,11 +191,26 @@ color: white;
 }
 
 .login-signup {
-  margin-top: 40px;;
+  margin-top: 40px;
   margin-left: 30px;
   padding-top: 10px;
   width: max-content;
   display: block;
+}
+
+/* Todo list styling  */
+.todo-list-container {
+  margin-top: 15px;
+  padding-left: 10px;
+}
+
+.todo-list {
+  text-decoration: none;
+  list-style: none;
+}
+
+.checkbox {
+  margin-right: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -190,4 +227,3 @@ color: white;
     transform: rotate(360deg);
   }
 }
-
