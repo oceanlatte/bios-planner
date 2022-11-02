@@ -57,8 +57,8 @@ const AddTodo = () => {
   return (
     <div >
       <h2>Add A New Todo ✏️</h2>
-      <form onSubmit={handleFormSubmit} className="add-form">
-        <label htmlFor="todoName">Todo Name: </label>
+      <form onSubmit={handleFormSubmit} className='add-form'>
+        <label className="label" htmlFor='todoName'>Todo Name: </label>
         <input
           className="form-input"
           placeholder="Add a new to-do here"
@@ -69,7 +69,7 @@ const AddTodo = () => {
           onChange={handleFormInput}
         />
 
-        <label htmlFor="recurrence"> 
+        <label className="label" htmlFor='recurrence'> 
           Recurrence Type:
         </label>
         <select name="recurrence" onChange={handleFormInput} value={formState.recurrence}>
@@ -81,13 +81,13 @@ const AddTodo = () => {
         </select>
         
         {/* !!!!!!!!! */}
-        {/* ADD A CONDITIONAL: if user choses "Daily" then show this dropdown */}
-        <p className="mb-1 mt-3" onChange={handleFormInput} >Reset Daily?</p>
-        <div className="d-flex" >
+        {/* ADD A CONDITIONAL: if user choses 'Daily' then show this dropdown */}
+        <p className='mb-1 mt-3 label' onChange={handleFormInput} >Reset Daily?</p>
+        <div className='d-flex' >
           <input type="radio" name="dailyReset" onClick={() => setDailyResetVal(true)} />
-          <label htmlFor="dailyReset" className="px-2">Yes</label>
+          <label htmlFor="dailyReset" className='px-2 label'>Yes</label>
           <input type="radio" name="dailyReset" onClick={() => setDailyResetVal(false)} />
-          <label htmlFor="dailyReset" className="px-2">No</label> 
+          <label htmlFor="dailyReset" className='px-2 label'>No</label> 
         </div>
 
         <button type="submit">Save Changes</button>

@@ -73,6 +73,10 @@ a {
   margin: 10px;
 }
 
+.label {
+  color: white;
+}
+
 /* Button Styling */
 
 .submit-btn {
