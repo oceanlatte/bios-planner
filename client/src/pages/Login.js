@@ -46,8 +46,8 @@ const Login = (props) => {
           <h4 className="title">Login</h4>
           <div className="card-body">
             <form onSubmit={handleFormSubmit}>
-              <input className="input-box"
-                className="form-input"
+              <input 
+                className="form-input inputBox"
                 placeholder="Your email"
                 name="email"
                 type="email"
@@ -64,7 +64,7 @@ const Login = (props) => {
                 value={formState.password}
                 onChange={handleChange}
               />
-              <button className="submit-btn add-btn btn" type="submit">
+              <button className="btn submit-btn add-btn" type="submit">
                 Submit
               </button>
             </form>

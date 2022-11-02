@@ -18,7 +18,8 @@ const todosSchema = new Schema(
         },
         recurrence: {
             type: String,
-            required: true
+            required: true,
+            default: 'Daily',
         },
         dailyReset: {
             type: Boolean,

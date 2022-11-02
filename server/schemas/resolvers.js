@@ -8,15 +8,15 @@ const resolvers = {
     users: async () => {
       return User.find();
     },
-    // add auth check here? 
     // get the signed in user
-    currentUser: async (parent, { username }, context) => {
+    currentUser: async (parent, args, context) => {
+      console.log('resolvers CONTEXT:', context.user)
       if (context.user) {
-        const userData = await User.findOne({ username })
+        const userData = await User.findOne({ _id: context.user._id })
           .select('-__v -password')
           .populate('budget')
           .populate('todos');
-
+        console.log('currentUSER resolver:', userData, 'username??', userData.username);
         return userData;
       }
       throw new AuthenticationError('Not logged in');
@@ -65,9 +65,10 @@ const resolvers = {
     addTodos: async (parent, args, context) => {
       if (context.user) {
         const todo = await Todos.create(args);
+        console.log(todo);
         return todo;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     },
 
     // () CANNOT ADD MULTIPLE BUDGETS
@@ -76,7 +77,7 @@ const resolvers = {
         const total = await Budget.create(args);
         return total;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     },
     addExpense: async (parent, { budgetId, expenseName, expenseAmount }, context) => {
       if (context.user) {
@@ -87,7 +88,7 @@ const resolvers = {
         );
         return expense;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     },
     // ?? Does income need to add the budget total here??
     addIncome: async (parent, { budgetId, incomeAmount }, context) => {
@@ -99,7 +100,7 @@ const resolvers = {
         );
         return incomeCreate;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     },
     // UPDATE MUTATIONS
     updateUser: async (parent, { userId, username, email }, context) => {
@@ -111,7 +112,7 @@ const resolvers = {
         );
         return user;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     },
     updateTodo: async (parent, { todoId, ...args }, context) => {
       if (context.user) {
@@ -121,7 +122,7 @@ const resolvers = {
         );
         return updateTodo;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     },
     updateBudget: async (parent, { budgetId, ...args }, context) => {
       if (context.user) {
@@ -131,7 +132,7 @@ const resolvers = {
         );
         return updateBudget;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     },
     // STILL NEED UPDATE: expenses, income
 
@@ -141,21 +142,21 @@ const resolvers = {
         const updatedUser = await User.findByIdAndDelete(_id);
         return updatedUser;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     },
     deleteSingleTodo: async (parent, { _id }, context) => {
       if (context.user) {
         const updatedTodos = Todos.findByIdAndDelete(_id);
         return updatedTodos;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     },
     deleteBudget: async (parent, { _id }, context) => {
       if (context.user) {
         const updatedBudget = Budget.findByIdAndDelete(_id);
         return updatedBudget;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     },
     deleteSingleExpense: async (parent, { budgetId, expenseId }, context) => {
       if (context.user) {
@@ -166,7 +167,7 @@ const resolvers = {
         );
         return deleteExpense;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     },
     deleteSingleIncome: async (parent, { budgetId, incomeId }, context) => {
       if (context.user) {
@@ -177,7 +178,7 @@ const resolvers = {
         );
         return deleteIncome;
       }
-      throw new AuthenticationError('you need to be loggged in!');
+      throw new AuthenticationError('you need to be logged in!');
     }
   }
 };

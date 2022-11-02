@@ -1,46 +1,91 @@
-import 'react-app-polyfill/ie11';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { Formik, Field, Form, FormikHelpers } from 'formik';
+import React, { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { ADD_TODOS } from '../utils/mutations';
+import { Navigate, useParams } from 'react-router-dom';
 
+const AddTodo = username => {
+  const { username: userParam } = useParams();
+  console.log('PROPS IN ADDTODO:', username)
 
-interface Values {
-  taskName: string;
-  description: string;
-  dueDate: string;
-}
+  const [formState, setFormState] = useState({ 
+    todoName: '', 
+    recurrence: '', 
+    dailyReset: '',
+    username: username 
+  });
 
-const AddTodo = () => {
+  const [dailyReset, setDailyResetVal] = useState(true);
+
+  const [addTodos, { error }] = useMutation(ADD_TODOS);
+
+  // update state based on form input
+  const handleFormInput = (e) => {
+    const { name, value } = e.target;
+
+    console.log('name:', name, 'value:', value);
+    
+    setFormState({
+      ...formState,
+      [name]: value,
+      dailyReset: dailyReset,
+    })
+    console.log('form state??:', formState)
+  }
+
+  // submit form
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await addTodos({
+        variables: { ...formState },
+      });
+      
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   return (
-    <body style={{ backgroundColor: "#846a91", width: "75%vw", minHeight: "75%vw", padding: "12px 20px",
-    margin: "8px 0"}}>
-    <div className="frm_flex">
-      <h1>Add new Todo!!</h1>
-      <Formik
-        initialValues={{
-          taskName: '',
-          description: '',
-          dueDate: '',
-        }}
-        onSubmit={(
-          values: Values,
-          { setSubmitting }: FormikHelpers<Values>
-        ) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 500);
-        }}
-      >
-        <Form >
-          <Field id="taskName" className="input-box" name="taskName" placeholder=" Add: Todo" />
-          <Field id="description" className="input-box" name="description" placeholder="Add Description: I need todo this!" label= "Description" />
-          <Field id="dueDate" className="input-box" name="dueDate" placeholder="Add Due Date: 11/02/2022" />
-          <button className="add-btn submit-btn" type="submit">Submit</button>
-        </Form>
-      </Formik>
+    <div >
+      <h2>Add A New Todo ✏️</h2>
+      <form onSubmit={handleFormSubmit}>
+        <label htmlFor='todoName'>Todo Name: </label>
+        <input
+          className="form-input"
+          placeholder="Add a new to-do here"
+          name="todoName"
+          type="input"
+          id="addTodoName"
+          value={formState.todoName}
+          onChange={handleFormInput}
+        />
+
+        <label htmlFor='recurrence'> 
+          Recurrence Type:
+        </label>
+        <select name='recurrence' onChange={handleFormInput} value={formState.recurrence}>
+          <option value="" defaultValue disabled hidden>Choose here</option>
+          <option value='daily'>Daily</option>
+          <option value='weekly'>Weekly</option>
+          <option value='monthly'>Monthly</option>
+          <option value='yearly'>Yearly</option>
+        </select>
+        
+        {/* !!!!!!!!! */}
+        {/* ADD A CONDITIONAL: if user choses 'Daily' then show this dropdown */}
+        <p className='mb-1 mt-3' onChange={handleFormInput} >Reset Daily?</p>
+        <div className='d-flex' >
+          <input type="radio" name="dailyReset" onClick={() => setDailyResetVal(true)} />
+          <label htmlFor="dailyReset" className='px-2'>Yes</label>
+          <input type="radio" name="dailyReset" onClick={() => setDailyResetVal(false)} />
+          <label htmlFor="dailyReset" className='px-2'>No</label> 
+        </div>
+
+        <button type='submit'>Save Changes</button>
+        </form>
     </div>
-    </body>
+
   );
 };
 
