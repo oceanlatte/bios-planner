@@ -49,20 +49,20 @@ li {
   padding: 5px;
 }
 
-.inputBox {
+.input-box {
   border-radius: 15px;
   padding-left: 5px;
-}
-
-.submit-btn {
-  background-color: #f0865c;
-  color: white;
 }
 
 .add-btn {
   padding: 5px;
   border-radius: 15px;
   border-width: 1px;
+}
+
+.submit-btn {
+  background-color: #f0865c;
+  color: white;
 }
 
 .todoBtn {
