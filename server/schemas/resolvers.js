@@ -8,15 +8,15 @@ const resolvers = {
     users: async () => {
       return User.find();
     },
-    // add auth check here? 
     // get the signed in user
-    currentUser: async (parent, { username }, context) => {
+    currentUser: async (parent, args, context) => {
+      console.log('resolvers CONTEXT:', context.user)
       if (context.user) {
-        const userData = await User.findOne({ username })
+        const userData = await User.findOne({ _id: context.user._id })
           .select('-__v -password')
           .populate('budget')
           .populate('todos');
-
+        console.log('currentUSER resolver:', userData, 'username??', userData.username);
         return userData;
       }
       throw new AuthenticationError('Not logged in');
@@ -65,6 +65,7 @@ const resolvers = {
     addTodos: async (parent, args, context) => {
       if (context.user) {
         const todo = await Todos.create(args);
+        console.log(todo);
         return todo;
       }
       throw new AuthenticationError('you need to be loggged in!');
