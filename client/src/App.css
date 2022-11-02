@@ -49,6 +49,16 @@ li {
   padding: 5px;
 }
 
+.inputBox {
+  border-radius: 15px;
+  padding-left: 5px;
+}
+
+.submit-btn {
+  background-color: #f0865c;
+  color: white;
+}
+
 .add-btn {
   padding: 5px;
   border-radius: 15px;
@@ -70,16 +80,6 @@ color: white;
 
 .budgetIncomeBtn {
 background-color: #5f3e74;
-}
-
-.inputBox {
-  border-radius: 15px;
-  padding-left: 5px;
-}
-
-.submit-btn {
-  background-color: #f0865c;
-  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {

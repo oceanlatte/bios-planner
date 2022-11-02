@@ -31,9 +31,9 @@ const AddBudget = () => {
         }}
       >
         <Form >
-          <Field id="amount" name="amount" placeholder=" Enter Amount: 9999.99" />
-          <Field id="category" name="category" placeholder="This will be a dropdown: you pick on from array of items" />
-          <button type="submit">Submit</button>
+          <Field id="amount" class="inputBox" name="amount" placeholder=" Enter Amount: 9999.99" />
+          <Field id="category" class="inputBox" name="category" placeholder="This will be a dropdown: you pick on from array of items" />
+          <button class="add-btn submit-btn" type="submit">Submit</button>
         </Form>
       </Formik>
     </div>
