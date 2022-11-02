@@ -44,8 +44,8 @@ const Signup = () => {
                     <h4 className="card-header">Sign Up</h4>
                     <div className="card-body">
                         <form onSubmit={handleFormSubmit}>
-                            <input class="inputBox"
-                                className="form-input"
+                            <input 
+                                className="form-input input-box"
                                 placeholder="Your username"
                                 name="username"
                                 type="username"
@@ -53,8 +53,8 @@ const Signup = () => {
                                 value={formState.username}
                                 onChange={handleChange}
                             />
-                            <input class="inputBox"
-                                className="form-input"
+                            <input 
+                                className="form-input input-box"
                                 placeholder="Your email"
                                 name="email"
                                 type="email"
@@ -62,8 +62,8 @@ const Signup = () => {
                                 value={formState.email}
                                 onChange={handleChange}
                             />
-                            <input class="inputBox"
-                                className="form-input"
+                            <input 
+                                className="form-input input-box"
                                 placeholder="******"
                                 name="password"
                                 type="password"
@@ -71,7 +71,7 @@ const Signup = () => {
                                 value={formState.password}
                                 onChange={handleChange}
                             />
-                            <button class="submit-btn add-btn" className="btn" type="submit">
+                            <button className="submit-btn add-btn btn" type="submit">
                                 Submit
                             </button>
                         </form>
