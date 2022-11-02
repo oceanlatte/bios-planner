@@ -1,19 +1,14 @@
 import React from "react";
+import DailyTodoList from "../Daily/Daily"
 
-const todos = ["Finish homework", "Wash dishes", "Clean room", "Make waffles"];
 
 const Todo = () => (
   <div className="card">
     <div>
       <h3 class="title">To Do List:</h3>
+      <DailyTodoList />
     </div>
-    <ul>
-
-      {todos.map((task) => (
-        <li key={task}>{task}</li>
-      ))}
-    </ul>
-  </div>
+    </div>
 );
 
 export default Todo;
