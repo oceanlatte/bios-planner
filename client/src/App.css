@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Zilla+Slab&display=swap');
+/* font-family: 'Ubuntu', sans-serif;
+font-family: 'Zilla Slab', serif */
 
 :root {
   --main-background: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
@@ -13,12 +15,18 @@
   --nav-bar: #5f3e74;
   --budget-background: #392646;
   --magenta: #660066;
-
+  --body-font: 'Ubuntu', sans-serif;
+  --header-font: 'Zilla Slab', serif;
 }
 
 body {
   background-image: var(--main-background);
   height: 100vh;
+  font-family: var(--body-font);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--header-font);
 }
 
 h2 {
@@ -37,11 +45,13 @@ a {
   color: black;
 }
 
+/* UTILS styling */
 .card {
   background-color: var(--budget-background);
   width: 25%;
   color: var(--font-color);
   border-radius: 15px;
+  margin-top: 25px;
   padding-bottom: 5px;
 }
 
@@ -50,12 +60,15 @@ a {
   border-radius: 15px;
   text-align: center;
   padding: 5px;
+  font-family: var(--header-font);
 }
 
 .inputBox {
   border-radius: 15px;
   padding-left: 5px;
 }
+
+/* Button Styling */
 
 .submit-btn {
   background-color: #f0865c;
@@ -85,13 +98,23 @@ color: white;
 background-color: #5f3e74;
 }
 
+/* Forms Styling  */
+.add-form {
+  border: solid black 1px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  padding: 5px 20px;
+  background-color: var(--nav-bar);
+  opacity: 90%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-
 
 @keyframes App-logo-spin {
   from {

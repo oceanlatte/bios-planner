@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { ADD_TODOS } from '../utils/mutations';
-import { Navigate, useParams } from 'react-router-dom';
+import { QUERY_USER } from '../utils/queries';
 
-const AddTodo = username => {
-  const { username: userParam } = useParams();
-  console.log('PROPS IN ADDTODO:', username)
+const AddTodo = () => {
+  const { data: userData } = useQuery(QUERY_USER);
+
+   // currentUser username, set to empty object if null
+   const currentUser = userData? userData.currentUser.username : {};
+   console.log('Current User loggg:', currentUser);
 
   const [formState, setFormState] = useState({ 
     todoName: '', 
-    recurrence: '', 
+    recurrence: 'daily', 
     dailyReset: '',
-    username: username 
+    username: currentUser 
   });
 
   const [dailyReset, setDailyResetVal] = useState(true);
@@ -22,8 +25,6 @@ const AddTodo = username => {
   const handleFormInput = (e) => {
     const { name, value } = e.target;
 
-    console.log('name:', name, 'value:', value);
-    
     setFormState({
       ...formState,
       [name]: value,
@@ -44,12 +45,19 @@ const AddTodo = username => {
     } catch (e) {
       console.error(e);
     }
+    // clear form values
+    setFormState({
+      todoName: '', 
+      recurrence: 'daily', 
+      dailyReset: '',
+      username: currentUser 
+    });
   };
 
   return (
     <div >
       <h2>Add A New Todo ✏️</h2>
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} className='add-form'>
         <label htmlFor='todoName'>Todo Name: </label>
         <input
           className="form-input"
@@ -83,6 +91,7 @@ const AddTodo = username => {
         </div>
 
         <button type='submit'>Save Changes</button>
+        {error && <div>Please check your entries.</div>}
         </form>
     </div>
 

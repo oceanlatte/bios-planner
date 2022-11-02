@@ -6,7 +6,7 @@ const Todo = () => (
   <div className="card">
     <div>
       <h3 className="title">To Do List:</h3>
-      <DailyTodoList />
+        <p>List goes here</p>
     </div>
     </div>
 );
