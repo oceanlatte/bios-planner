@@ -4,7 +4,7 @@ import BudgetList from "./BudgetList"
 
 const Budget = () => (
     <div className = "card">
-        <h3 class="title">Budget</h3>
+        <h3 className="title">Budget</h3>
   <ul>
     {todos.map(task => (
       <li key={task}>{task}</li>
