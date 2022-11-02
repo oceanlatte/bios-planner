@@ -28,8 +28,13 @@ const Todo = () => {
     <div className="card">
       <div>
         <h3 className="title">To Do List</h3>
-        <ul>
-          {todoList.length && names.map((todo, i) => <li key={i}>{todo}</li>)}
+        <ul className="todo-list-container">
+          {todoList.length && names.map((todo, i) => 
+          <li key={i} className="todo-list">
+            <input type="checkbox" key={i} className="checkbox" />
+            <label for={todo} name={todo} value={todo} > {todo}</label>
+          </li>
+          )}
         </ul>
       </div>
     </div>

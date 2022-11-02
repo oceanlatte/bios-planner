@@ -176,6 +176,21 @@ color: white;
   display: block;
 }
 
+/* Todo list styling  */
+.todo-list-container {
+  margin-top: 15px;
+  padding-left: 10px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.todo-list{
+  text-decoration: none;
+  list-style: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
