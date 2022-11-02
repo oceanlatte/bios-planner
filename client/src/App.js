@@ -53,7 +53,7 @@ function App() {
           <div className="container">
             <Routes>
               {/* <Route path="/home" element={<Home />} /> */}
-              <Route path="/" element={<Profile />} />
+              {/* <Route path="/" element={<Profile />} /> */}
               <Route path="/profile" element={<Profile />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />

@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_TODOS } from '../utils/mutations';
+import { Navigate, useParams } from 'react-router-dom';
 
-const AddTodo = () => {
+const AddTodo = username => {
+  const { username: userParam } = useParams();
+  console.log('PROPS IN ADDTODO:', username)
+
   const [formState, setFormState] = useState({ 
     todoName: '', 
     recurrence: '', 
     dailyReset: '',
-    username: 'bob' 
+    username: username 
   });
 
   const [dailyReset, setDailyResetVal] = useState(true);
@@ -61,6 +65,7 @@ const AddTodo = () => {
           Recurrence Type:
         </label>
         <select name='recurrence' onChange={handleFormInput} value={formState.recurrence}>
+          <option value="" defaultValue disabled hidden>Choose here</option>
           <option value='daily'>Daily</option>
           <option value='weekly'>Weekly</option>
           <option value='monthly'>Monthly</option>
