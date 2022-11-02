@@ -23,6 +23,7 @@ body {
   background-image: var(--main-background);
   min-height: 100vh;
   height: fit-content;
+  max-height: max-content;
   font-family: var(--body-font);
   background-size: cover;
 }

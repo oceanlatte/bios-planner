@@ -49,15 +49,15 @@ return (
     <form
         className="flex-row justify-center justify-space-between-md align-stretch"
         onSubmit={handleFormSubmit}
-      >
-        <Form >
+      > </form>
+        {/* <Form >
           <Field id="amount" className="input-box" name="amount" placeholder=" Enter Amount: 9999.99" />
           <Field id="category" className="input-box" name="category" placeholder="This will be a dropdown: you pick on from array of items" />
           <button className="add-btn submit-btn" type="submit">Submit</button>
         </Form>
-      </Formik>
+      </Formik> */}
     </div>
-    </body>
+    
   );
 };
 
