@@ -9,7 +9,6 @@ import {
 import { setContext } from "@apollo/client/link/context";
 
 import Header from "./components/Header/Header";
-
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
@@ -45,7 +44,6 @@ const client = new ApolloClient({
 });
 
 function App() {
-
   
   return (
     <ApolloProvider client={client}>
