@@ -4,7 +4,7 @@ import Budget from "../components/Budget/Budget";
 function Yearly() {
   return (
     <div>
-      <h2>Yearly</h2>
+      <h2 className="title">Yearly</h2>
       <Budget />
       <Todo />
     </div>

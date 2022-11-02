@@ -27,7 +27,7 @@ const Todo = () => {
   return (
     <div className="card">
       <div>
-        <h3 className="title">TO DO LIST:</h3>
+        <h3 className="title">To Do List:</h3>
         <ul>
           {todoList.length && names.map((todo, i) => <li key={i}>{todo}</li>)}
         </ul>

@@ -8,7 +8,7 @@ function Daily() {
   
   return (
     <div>
-      <h2>Daily</h2>
+      <h2 className="title">Daily</h2>
       <Budget />
       <Todo />
     </div>
