@@ -65,6 +65,7 @@ const resolvers = {
     addTodos: async (parent, args, context) => {
       if (context.user) {
         const todo = await Todos.create(args);
+        console.log(todo);
         return todo;
       }
       throw new AuthenticationError('you need to be loggged in!');

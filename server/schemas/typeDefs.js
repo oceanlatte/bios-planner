@@ -15,7 +15,7 @@ const typeDefs = gql`
         _id: ID
         todoName: String!
         createdAt: String
-        username: String
+        username: String!
         recurrence: String!
         dailyReset: Boolean!
     }
