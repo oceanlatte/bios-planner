@@ -21,9 +21,9 @@ font-family: 'Zilla Slab', serif */
 }
 
 body {
-  background-image: var(--main-background);
-  min-height: 100vmax;
-  /* min-height: 100vh; */
+  background-image: var(--img-background);
+  /* min-height: 100vmax; */
+  min-height: 100vh;
   height: fit-content;
   max-height: max-content;
   font-family: var(--body-font);
@@ -91,8 +91,11 @@ a {
 }
 
 .header-block {
-  padding: 30px;
-  color: var(--budget-background);
+  padding: 10px ;
+  /* color: var(--budget-background); */
+  opacity: 90%;
+  margin: 15px 20px 0 20px;
+  color: var(--font-color);
 }
 
 /* Button Styling */
