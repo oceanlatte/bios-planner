@@ -36,7 +36,7 @@ li {
 
 .card {
   background-color: var(--budget-background);
-  width: 25% ;
+  width: 25%;
   color: var(--font-color);
   border-radius: 15px;
   padding-bottom: 5px;
@@ -46,9 +46,10 @@ li {
   background-color: #f0865c;
   border-radius: 15px;
   text-align: center;
+  padding: 5px;
 }
 
-.addBtn {
+.add-btn {
   padding: 5px;
   border-radius: 15px;
   border-width: 1px;
@@ -76,10 +77,9 @@ background-color: #5f3e74;
   padding-left: 5px;
 }
 
-.submitBtn {
+.submit-btn {
   background-color: #f0865c;
   color: white;
-  align-content: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
