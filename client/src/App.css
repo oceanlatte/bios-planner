@@ -3,6 +3,7 @@
 font-family: 'Zilla Slab', serif */
 
 :root {
+  --img-background: url(../public/6876899.jpg);
   --main-background: linear-gradient(to right bottom, #eeeeee, #d8d8d8, #c3c3c3, #aeaeae, #999999);
   --orange-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
   --purple-gradient: linear-gradient(to bottom, #f39d7c, #f6ad90, #f9bda5, #faccba, #fbdcd0);
@@ -20,7 +21,7 @@ font-family: 'Zilla Slab', serif */
 }
 
 body {
-  background-image: var(--main-background);
+  background-image: var(--img-background);
   min-height: 100vh;
   height: fit-content;
   max-height: max-content;
