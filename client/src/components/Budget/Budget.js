@@ -9,7 +9,7 @@ const Budget = () => (
     {todos.map(task => (
       <li key={task}>{task}</li>
     ))}
-  </ul> */}
+  </ul> 
   </div>
 );
 
