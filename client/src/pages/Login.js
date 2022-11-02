@@ -41,8 +41,8 @@ const Login = (props) => {
 
   return (
     <main>
-        <div className="card">
-          <h4 className="title">Login</h4>
+        <div className="card login-signup">
+          <h4 className='card-header'>Login</h4>
           <div>
             <form onSubmit={handleFormSubmit}>
               <input 

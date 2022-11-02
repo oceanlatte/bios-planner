@@ -59,13 +59,15 @@ a {
   margin-top: 25px;
   padding-bottom: 5px;
   padding: 0 15px 5px 15px;
+  opacity: 92%;
 }
 
 .title {
   background-color: #f0865c;
   border-radius: 15px;
   text-align: center;
-  padding: 5px;
+  margin: 10px 10px 0 10px;
+  padding: 5px 10px 5px 10px;
   font-family: var(--header-font);
 }
 
@@ -83,6 +85,8 @@ a {
 .container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  flex: 1 0 2;
 }
 
 .block {
@@ -92,7 +96,6 @@ a {
 
 .header-block {
   padding: 10px ;
-  /* color: var(--budget-background); */
   opacity: 90%;
   margin: 15px 20px 0 20px;
   color: var(--font-color);
@@ -106,7 +109,7 @@ a {
 }
 
 .add-btn {
-  padding: 5px 15px;
+  padding: 5px 25px;
   border-radius: 15px;
   border-width: 1px;
 }
@@ -143,6 +146,7 @@ color: white;
   display: flex;
   margin-top: 30px;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /* Profile styling  */
@@ -162,6 +166,14 @@ color: white;
   padding: 5px 20px;
   background-color: var(--nav-bar);
   opacity: 90%;
+}
+
+.login-signup {
+  margin-top: 40px;;
+  margin-left: 30px;
+  padding-top: 10px;
+  width: max-content;
+  display: block;
 }
 
 @media (prefers-reduced-motion: no-preference) {

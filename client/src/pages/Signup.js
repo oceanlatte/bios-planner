@@ -40,7 +40,7 @@ const Signup = () => {
     return (
         <main className="flex-row justify-center mb-4">
             <div className="col-12 col-md-6">
-                <div className="card">
+                <div className="card login-signup">
                     <h4 className="card-header">Sign Up</h4>
                     <div className="card-body">
                         <form onSubmit={handleFormSubmit}>
