@@ -24,14 +24,14 @@ const Header = () => {
               <Link class= "tab3 right"to="/Weekly">Weekly</Link>
               <Link class= "tab4 right"to="/Monthly">Monthly</Link>
               <Link class= "tab5 right"to="/Yearly">Yearly</Link>
-              <a class= "logout right" href="/" onClick={logout}>
+              <a class= " tab1 right" href="/" onClick={logout}>
                 Logout
               </a>
             </>
           ) : (
             <>
-              <Link class= "tab1 right" to="/login">Login</Link>
-              <Link class= "tab2 right"to="/signup">Signup</Link>
+              <Link class= " tab1 right" to="/login">Login</Link>
+              <Link class= " tab2 right"to="/signup">Signup</Link>
             </>
           )}
         </nav>

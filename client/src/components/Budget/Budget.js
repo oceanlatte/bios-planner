@@ -1,10 +1,10 @@
 import React from "react";
+import BudgetList from "./BudgetList"
 
-const todos = ["Finish homework", "Wash dishes", "Clean room", "Make waffles"];
 
 const Budget = () => (
-    <div class="card" className ="card">
-        <h3 class="title">Budget:</h3>
+    <div className = "card">
+        <h3 class="title">Budget</h3>
   <ul>
     {todos.map(task => (
       <li key={task}>{task}</li>
