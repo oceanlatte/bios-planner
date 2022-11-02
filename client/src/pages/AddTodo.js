@@ -6,20 +6,21 @@ import { QUERY_USER } from '../utils/queries';
 const AddTodo = () => {
   const { data: userData } = useQuery(QUERY_USER);
 
-   // currentUser username, set to empty object if null
-   const currentUser = userData? userData.currentUser.username : {};
-   console.log('Current User loggg:', currentUser);
+  // currentUser username, set to empty object if null
+  const currentUser = userData? userData.currentUser.username : {};
+  console.log('Current User log:', currentUser);
 
+  // Mutation to add the todo input to DB
+  const [addTodos, { error }] = useMutation(ADD_TODOS);
+
+  // useState variables 
   const [formState, setFormState] = useState({ 
     todoName: '', 
     recurrence: 'daily', 
     dailyReset: '',
     username: currentUser 
   });
-
   const [dailyReset, setDailyResetVal] = useState(true);
-
-  const [addTodos, { error }] = useMutation(ADD_TODOS);
 
   // update state based on form input
   const handleFormInput = (e) => {
@@ -41,7 +42,6 @@ const AddTodo = () => {
       const { data } = await addTodos({
         variables: { ...formState },
       });
-      
     } catch (e) {
       console.error(e);
     }

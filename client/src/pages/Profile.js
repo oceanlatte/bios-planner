@@ -1,15 +1,12 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import { QUERY_USER, QUERY_USERS } from '../utils/queries';
 
 import Todo from "../components/Todo/Todo";
 import Budget from "../components/Budget/Budget";
 
 const Profile = () => {
   return (
-    <div>
+    <div className="add-btn-list">
       <Link to={'/add-todos'}>
           <button className="add-btn todoBtn">Add Todo</button>
       </Link>

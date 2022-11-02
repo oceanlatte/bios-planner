@@ -21,8 +21,10 @@ font-family: 'Zilla Slab', serif */
 
 body {
   background-image: var(--main-background);
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
   font-family: var(--body-font);
+  background-size: cover;
 }
 
 h1, h2, h3, h4 {
@@ -65,7 +67,9 @@ a {
 
 .inputBox {
   border-radius: 15px;
+  padding-top: 2px;
   padding-left: 5px;
+  margin: 10px;
 }
 
 /* Button Styling */

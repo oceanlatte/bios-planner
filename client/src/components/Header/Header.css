@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Zilla+Slab&display=swap');
+/* font-family: 'Ubuntu', sans-serif;
+font-family: 'Zilla Slab', serif */
+
 :root {
   --main-background: linear-gradient(
     to right bottom,
@@ -45,15 +49,35 @@ a {
   margin: auto;
 }
 
+header {
+  width: 100%;
+  padding-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: #660066 solid 1px;
+}
+
+.logo {
+  display: inline-block;
+  margin-bottom: 0;
+  color: var(--dark-orange);
+}
+
 nav {
   font-size: 20px;
   list-style: none;
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 6px 6px 0 0;
   white-space: nowrap;
   cursor: pointer;
-  border: black solid 1px;
   text-align: left;
+  font-family: var(--header-font);
+  margin-bottom: 0;
 }
 
 .tab1 {

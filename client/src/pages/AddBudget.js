@@ -1,14 +1,16 @@
-// import 'react-app-polyfill/ie11';
-// import * as React from 'react';
-// import * as ReactDOM from 'react-dom';
-// import { Formik, Field, Form, FormikHelpers } from 'formik';
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
+import { QUERY_USER } from '../utils/queries';
 import { ADD_BUDGET_TOTAL } from '../utils/mutations';
 
 
 const AddBudgetForm = () => {
-  
+  const { data: userData } = useQuery(QUERY_USER);
+
+   // currentUser username, set to empty object if null
+   const currentUser = userData? userData.currentUser.username : {};
+   console.log('Current User loggg:', currentUser);
+
   const [budgetState, setBudgetState] = useState({ total: ''});
 
 
