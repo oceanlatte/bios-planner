@@ -23,4 +23,4 @@ This application can be used by anyone looking to get more organized. You can fi
 [Bryan Nolasco](https://github.com/bryannolasco11)
 [Ocean Veliz](https://github.com/oceanlatte)
 [Ian Zimmers-Kraft](https://github.com/TheTrueZK)
-[Stephanie Russow](https://github.com/TheTrueZK)
+[Stephanie Rossouw](https://github.com/strossouw)
